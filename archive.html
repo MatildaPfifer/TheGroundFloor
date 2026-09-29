@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Past issues | The Ground Floor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF0EC; --panel: #FFFFFF; --ink: #14201C; --muted: #55635D; --line: #C8CFC9;
+    --bayou: #1E4D40; --orange: #BF5700; --on-bayou: #F3F6F3;
+    --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101815; --panel: #16211D; --ink: #E6ECE8; --muted: #9AA8A1; --line: #2B3833; --bayou: #1B4238; --orange: #E57A2E;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 1.125rem; line-height: 1.65; }
+  a { color: inherit; text-decoration-color: var(--orange); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+  a:hover { color: var(--orange); }
+  a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+  header {
+    background-color: var(--bayou);
+    background-image:
+      linear-gradient(rgba(255,255,255,.075) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.075) 1px, transparent 1px);
+    background-size: 96px 96px, 96px 96px;
+    color: var(--on-bayou);
+    padding: 1.5rem 1.25rem 2rem;
+    border-bottom: 2px dashed var(--orange);
+  }
+  .inner { max-width: 60rem; margin: 0 auto; }
+  .club { font-family: var(--sans); font-weight: 600; font-size: .95rem; }
+  .club a { text-decoration: none; }
+  h1 { font-family: var(--sans); font-variation-settings: "wdth" 66; font-weight: 800; font-size: clamp(3rem, 10vw, 6rem); line-height: .9; margin: 2rem 0 0; }
+  main { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  ul { list-style: none; padding: 0; margin: 0; max-width: 44rem; }
+  li { border-top: 1px solid var(--line); padding: 1.1rem 0; display: grid; grid-template-columns: 9rem 1fr; gap: 1.25rem; }
+  li:last-child { border-bottom: 1px solid var(--line); }
+  .date { font-family: var(--sans); font-variation-settings: "wdth" 85; font-weight: 700; color: var(--bayou); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .date { color: var(--orange); } }
+  li a { font-family: var(--sans); font-weight: 650; font-size: 1.15rem; }
+  li p { margin: .2rem 0 0; font-size: 1rem; color: var(--muted); }
+  @media (max-width: 560px) { li { grid-template-columns: 1fr; gap: .2rem; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <div class="club"><a href="index.html">The Ground Floor, latest issue</a></div>
+    <h1>Past issues</h1>
+  </div>
+</header>
+<main>
+  <ul>
+    <!-- Add each new issue at the top of this list -->
+    <li>
+      <div class="date">Sept 29, 2026</div>
+      <div>
+        <a href="2026-09-29.html">Rates break 7% as Houston keeps building</a>
+        <p>Eli Lilly in Generation Park, Houston's August sales, the NHL race, and big projects from Frisco to Miami.</p>
+      </div>
+    </li>
+  </ul>
+</main>
+</body>
+</html>
