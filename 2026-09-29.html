@@ -10,15 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #EEF0EC;
-    --panel: #FFFFFF;
-    --ink: #14201C;
-    --muted: #55635D;
-    --line: #C8CFC9;
-    --bayou: #1E4D40;
-    --bayou-deep: #163A30;
-    --orange: #BF5700;
-    --on-bayou: #F3F6F3;
+    --paper: #EEF0EC; --panel: #FFFFFF; --ink: #14201C; --muted: #55635D; --line: #C8CFC9;
+    --bayou: #1E4D40; --bayou-deep: #163A30; --orange: #BF5700; --on-bayou: #F3F6F3;
     --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
     --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
     box-sizing: border-box;
@@ -27,33 +20,18 @@
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper: #101815;
-      --panel: #16211D;
-      --ink: #E6ECE8;
-      --muted: #9AA8A1;
-      --line: #2B3833;
-      --bayou: #1B4238;
-      --bayou-deep: #122F27;
-      --orange: #E57A2E;
+      --paper: #101815; --panel: #16211D; --ink: #E6ECE8; --muted: #9AA8A1; --line: #2B3833;
+      --bayou: #1B4238; --bayou-deep: #122F27; --orange: #E57A2E;
     }
   }
   *, *::before, *::after { box-sizing: inherit; }
   html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--serif);
-    font-size: 1.125rem;
-    line-height: 1.68;
-    -webkit-font-smoothing: antialiased;
-  }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 1.125rem; line-height: 1.68; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration-color: var(--orange); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
   a:hover { color: var(--orange); }
   a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 2px; }
 
-  /* Masthead: the plat-map grid is the one bold move on the page */
   .masthead {
     background-color: var(--bayou);
     background-image:
@@ -65,56 +43,18 @@
     color: var(--on-bayou);
     padding: 1.5rem 1.25rem 0;
   }
-  .masthead-inner { max-width: 60rem; margin: 0 auto; }
-  .club {
-    font-family: var(--sans);
-    font-variation-settings: "wdth" 90;
-    font-weight: 600;
-    font-size: .95rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: .5rem 1.5rem;
-    opacity: .92;
-  }
-  h1 {
-    font-family: var(--sans);
-    font-variation-settings: "wdth" 66;
-    font-weight: 800;
-    font-size: clamp(3.4rem, 13vw, 8.5rem);
-    line-height: .86;
-    letter-spacing: -.01em;
-    margin: 2.75rem 0 1rem;
-    max-width: 9ch;
-  }
-  .dek {
-    font-size: clamp(1.1rem, 2.4vw, 1.35rem);
-    max-width: 34rem;
-    margin: 0 0 2.25rem;
-    opacity: .95;
-  }
-  /* Property line: dashed survey boundary */
+  .wrap { max-width: 60rem; margin: 0 auto; }
+  .club { font-family: var(--sans); font-variation-settings: "wdth" 90; font-weight: 600; font-size: .95rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.5rem; opacity: .92; }
+  h1 { font-family: var(--sans); font-variation-settings: "wdth" 66; font-weight: 800; font-size: clamp(3.4rem, 13vw, 8.5rem); line-height: .86; letter-spacing: -.01em; margin: 2.75rem 0 1rem; max-width: 9ch; }
+  .dek { font-size: clamp(1.1rem, 2.4vw, 1.35rem); max-width: 34rem; margin: 0 0 2.25rem; opacity: .95; }
   .property-line { border: 0; border-top: 2px dashed var(--orange); margin: 0; }
 
-  /* Market tape */
-  .tape {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    background: var(--bayou-deep);
-  }
+  .tape-wrap { background: var(--bayou-deep); color: var(--on-bayou); padding: 0 1.25rem; }
+  .tape { display: grid; grid-template-columns: repeat(4, 1fr); }
   .tape div { padding: 1.1rem 1rem 1.2rem; border-left: 1px solid rgba(255,255,255,.14); }
   .tape div:first-child { border-left: 0; padding-left: 0; }
-  .tape b {
-    display: block;
-    font-family: var(--sans);
-    font-variation-settings: "wdth" 75;
-    font-weight: 700;
-    font-size: clamp(1.6rem, 4vw, 2.3rem);
-    line-height: 1.05;
-  }
+  .tape b { display: block; font-family: var(--sans); font-variation-settings: "wdth" 75; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.05; }
   .tape span { font-family: var(--sans); font-size: .85rem; line-height: 1.35; display: block; margin-top: .3rem; opacity: .85; }
-  .tape-wrap { background: var(--bayou-deep); color: var(--on-bayou); padding: 0 1.25rem; }
-  .tape-wrap .inner { max-width: 60rem; margin: 0 auto; }
   .tape-note { font-family: var(--sans); font-size: .78rem; opacity: .7; padding: 0 0 1rem; margin: 0; }
   @media (max-width: 640px) {
     .tape { grid-template-columns: 1fr 1fr; }
@@ -122,99 +62,60 @@
     .tape div:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.14); }
   }
 
-  /* Contents */
-  nav.contents {
-    max-width: 60rem; margin: 0 auto; padding: 1.25rem;
-    font-family: var(--sans); font-size: .95rem;
-    display: flex; flex-wrap: wrap; gap: .4rem 1.4rem;
-    border-bottom: 1px solid var(--line);
-  }
+  /* Join strip sits right under the header */
+  .join { background: var(--panel); border-bottom: 1px solid var(--line); padding: 1.25rem; }
+  .join .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; }
+  .join p { margin: 0; max-width: 34rem; font-size: 1.02rem; }
+  .join strong { font-family: var(--sans); font-variation-settings: "wdth" 85; font-size: 1.2rem; display: block; line-height: 1.2; margin-bottom: .2rem; }
+  .buttons { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .btn { font-family: var(--sans); font-weight: 650; font-size: .98rem; text-decoration: none; padding: .65rem 1.1rem; border-radius: 3px; background: var(--bayou); color: var(--on-bayou); border: 1.5px solid var(--bayou); }
+  .btn.alt { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+  nav.contents { max-width: 60rem; margin: 0 auto; padding: 1.1rem 1.25rem; font-family: var(--sans); font-size: .95rem; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; border-bottom: 1px solid var(--line); }
   nav.contents a { text-decoration: none; color: var(--muted); }
   nav.contents a:hover { color: var(--orange); }
 
   main { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
   section { padding: 3.25rem 0 0; }
   .col { max-width: 42rem; }
-  h2 {
-    font-family: var(--sans);
-    font-variation-settings: "wdth" 82;
-    font-weight: 700;
-    font-size: clamp(1.7rem, 3.6vw, 2.3rem);
-    line-height: 1.1;
-    margin: 0 0 1rem;
-  }
-  h3 {
-    font-family: var(--sans);
-    font-variation-settings: "wdth" 92;
-    font-weight: 650;
-    font-size: 1.3rem;
-    line-height: 1.25;
-    margin: .3rem 0 .6rem;
-  }
+  h2 { font-family: var(--sans); font-variation-settings: "wdth" 82; font-weight: 700; font-size: clamp(1.7rem, 3.6vw, 2.3rem); line-height: 1.1; margin: 0 0 1rem; }
+  h3 { font-family: var(--sans); font-variation-settings: "wdth" 92; font-weight: 650; font-size: 1.3rem; line-height: 1.25; margin: .3rem 0 .6rem; }
   p { margin: 0 0 1rem; }
-  .lede { font-size: 1.25rem; line-height: 1.6; }
-
-  .takeaway {
-    background: var(--panel);
-    border-left: 4px solid var(--orange);
-    padding: 1.1rem 1.35rem;
-    margin-top: 1.5rem;
-  }
-  .takeaway h3 { margin-top: 0; font-size: 1.05rem; color: var(--orange); }
-  .takeaway p:last-child { margin-bottom: 0; }
+  .lede { font-size: 1.28rem; line-height: 1.6; }
+  .intro { color: var(--muted); max-width: 42rem; }
 
   .stories { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
   @media (max-width: 760px) { .stories { grid-template-columns: 1fr; } }
   article { border-top: 1px solid var(--line); padding: 1.25rem 0 1.4rem; }
-  .kicker {
-    font-family: var(--sans); font-size: .85rem; font-weight: 600;
-    display: flex; justify-content: space-between; gap: 1rem;
-  }
+  .kicker { font-family: var(--sans); font-size: .85rem; font-weight: 600; display: flex; justify-content: space-between; gap: 1rem; }
   .kicker .tag { color: var(--orange); }
   .kicker time { color: var(--muted); font-weight: 500; }
   article p { font-size: 1.05rem; }
   .src { font-family: var(--sans); font-size: .9rem; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
 
-  .spotlight {
-    background: var(--panel);
-    padding: 1.75rem 1.5rem 1.4rem;
-    border-top: 6px solid var(--bayou);
-  }
-  .spotlight .figs { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; margin: 1.25rem 0 1.4rem; }
-  .spotlight .figs b { display: block; font-family: var(--sans); font-variation-settings: "wdth" 75; font-weight: 700; font-size: 2rem; line-height: 1; color: var(--bayou); }
-  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .spotlight .figs b { color: var(--on-bayou); } }
-  .spotlight .figs span { font-family: var(--sans); font-size: .85rem; color: var(--muted); }
+  /* Deal sheet: the club's running ledger of projects and trades */
+  .sheet { overflow-x: auto; background: var(--panel); border-top: 6px solid var(--bayou); }
+  table { border-collapse: collapse; width: 100%; min-width: 44rem; font-family: var(--sans); font-size: .95rem; }
+  th { text-align: left; font-weight: 600; color: var(--muted); font-size: .85rem; padding: .8rem 1rem; border-bottom: 1px solid var(--line); }
+  td { padding: .8rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td .where { display: block; color: var(--muted); font-size: .85rem; }
+  .pill { font-size: .8rem; font-weight: 600; color: var(--orange); white-space: nowrap; }
+  .sheet-note { font-family: var(--sans); font-size: .82rem; color: var(--muted); margin-top: .6rem; }
 
-  ol.steps { padding-left: 1.3rem; margin: 0 0 1rem; }
-  ol.steps li { margin-bottom: .5rem; padding-left: .2rem; }
+  .visit { display: grid; grid-template-columns: 14rem 1fr; gap: 2rem; }
+  @media (max-width: 760px) { .visit { grid-template-columns: 1fr; gap: 1rem; } }
+  .visit dl { margin: 0; font-family: var(--sans); }
+  .visit dt { font-size: .82rem; color: var(--muted); }
+  .visit dd { margin: 0 0 1rem; font-variation-settings: "wdth" 75; font-weight: 700; font-size: 1.9rem; line-height: 1.05; color: var(--bayou); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .visit dd { color: var(--orange); } }
 
-  .question {
-    font-family: var(--sans);
-    font-variation-settings: "wdth" 85;
-    font-weight: 600;
-    font-size: clamp(1.4rem, 3vw, 1.85rem);
-    line-height: 1.3;
-    max-width: 38rem;
-    margin: 0;
-  }
-
-  .join { background: var(--bayou); color: var(--on-bayou); padding: 1.75rem 1.5rem; }
-  .join h2 { margin-bottom: .6rem; }
-  .buttons { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.25rem; }
-  .btn {
-    font-family: var(--sans); font-weight: 650; font-size: 1rem;
-    text-decoration: none; padding: .7rem 1.2rem; border-radius: 3px;
-    background: var(--on-bayou); color: var(--bayou-deep);
-  }
-  .btn.alt { background: transparent; color: var(--on-bayou); border: 1.5px solid rgba(255,255,255,.6); }
-  .btn:hover { background: var(--orange); color: #fff; border-color: var(--orange); }
-
-  footer {
-    max-width: 60rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem;
-    font-family: var(--sans); font-size: .9rem; color: var(--muted);
-    border-top: 1px solid var(--line);
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem 2rem;
-  }
+  .desk { background: var(--bayou); color: var(--on-bayou); padding: 1.75rem 1.5rem 1.25rem; }
+  .desk a { color: inherit; }
+  .desk ol { padding-left: 1.3rem; margin: 0 0 1rem; }
+  .desk li { margin-bottom: .5rem; padding-left: .2rem; }
 
   .calendar { list-style: none; padding: 0; margin: 0; max-width: 46rem; }
   .calendar li { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1.25rem; padding: 1rem 0; border-top: 1px solid var(--line); }
@@ -225,12 +126,14 @@
   .calendar p { font-size: 1rem; margin: 0; }
   .calendar .later .when { color: var(--muted); }
   @media (max-width: 560px) { .calendar li { grid-template-columns: 1fr; gap: .3rem; } }
+
+  footer { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; font-family: var(--sans); font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem 2rem; }
 </style>
 </head>
 <body>
 
 <header class="masthead">
-  <div class="masthead-inner">
+  <div class="wrap">
     <div class="club">
       <span>McCombs Houston MBA Real Estate Club</span>
       <span>Week of September 29, 2026</span>
@@ -242,217 +145,185 @@
 </header>
 
 <div class="tape-wrap">
-  <div class="inner">
+  <div class="wrap">
     <div class="tape" role="list" aria-label="Market numbers this week">
       <div role="listitem"><b>7.03%</b><span>30-year mortgage average, first time above 7% since January 2025</span></div>
       <div role="listitem"><b>5.11%</b><span>10-year Treasury, a 19-year high</span></div>
       <div role="listitem"><b>$330K</b><span>Houston median single-family price in August</span></div>
       <div role="listitem"><b>&minus;1.2%</b><span>Houston apartment rents, year over year</span></div>
     </div>
-    <p class="tape-note">Sources: Freddie Mac PMMS, Sept 24; Fox Business; Houston Association of Realtors; CoStar via Hoodline.</p>
+    <p class="tape-note">Sources: Freddie Mac, Sept 24; Fox Business; Houston Association of Realtors; CoStar via Hoodline.</p>
+  </div>
+</div>
+
+<div class="join" id="join">
+  <div class="wrap">
+    <p><strong>Join the Real Estate Club</strong>Open to anyone in the Houston MBA program with an interest in real estate. No dues, one signature event each semester, and deals and news shared all week.</p>
+    <div class="buttons">
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfm7e2FvlaoQKlrLaf-QsSh5q1eJGyd-x3Hr_8ReTECwaP9jQ/viewform" target="_blank" rel="noopener">Fill out the interest form</a>
+      <a class="btn alt" href="https://chat.whatsapp.com/Jf6gnrF5uKbHRuntyZtRyz?mode=gi_t" target="_blank" rel="noopener">Join the WhatsApp group</a>
+    </div>
   </div>
 </div>
 
 <nav class="contents" aria-label="In this issue">
-  <a href="#snapshot">Snapshot</a>
-  <a href="#trend">Trend to watch</a>
+  <a href="#short">The short version</a>
   <a href="#houston">Houston</a>
+  <a href="#deals">Deal sheet</a>
   <a href="#national">Nationwide</a>
-  <a href="#spotlight">Spotlight</a>
-  <a href="#analyst">Analyst's corner</a>
-  <a href="#coming-up">Coming up</a>
-  <a href="#question">Question</a>
-  <a href="#join">Join us</a>
+  <a href="#visit">Site visit</a>
+  <a href="#desk">Underwriting desk</a>
+  <a href="#calendar">On the calendar</a>
   <a href="archive.html">Past issues</a>
 </nav>
 
 <main>
 
-  <section id="snapshot">
+  <section id="short">
     <div class="col">
-      <h2>The week in one read</h2>
-      <p class="lede">Capital got more expensive while Houston kept building. The 30-year mortgage average crossed 7% for the first time since January 2025 as Treasury yields climbed, and in the same week Houston broke ground on the largest pharmaceutical ingredient plant in Texas history.</p>
-      <p>Houston buyers now have more homes to choose from than they have seen in years, and prices have softened a bit at the median. The rate jump takes back part of that leverage. On the commercial side, manufacturing and logistics tenants continue to drive the biggest deals in the region.</p>
-      <div class="takeaway">
-        <h3>Hallway takeaway</h3>
-        <p>The question this fall is shifting from "where is the demand?" to "does my deal still work at today's cost of capital?" Houston has the demand story. Financing is now the swing factor.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="trend">
-    <div class="col">
-      <h2>Trend to watch: manufacturing is the new anchor tenant</h2>
-      <p>Look at where the biggest checks landed this month. Eli Lilly started work on a $6.5 billion plant in northeast Houston. Hines announced six industrial projects totaling more than 2.3 million square feet, with manufacturing demand as the stated driver. Houston-based Partners Real Estate is building a 572,640-square-foot speculative, rail-served building near Samsung's plant in Taylor.</p>
-      <p>For Houston, that means land near highways, rail and workforce is getting more valuable, and the fast growth on the edges of the metro, like Waller, starts to make more sense as housing for the people who will staff these plants.</p>
+      <h2>The short version</h2>
+      <p class="lede">Capital got more expensive while Houston kept building. The 30-year mortgage average crossed 7% for the first time since January 2025, and in the same week Houston broke ground on the largest pharmaceutical ingredient plant in Texas history.</p>
+      <p>The pattern to notice is who is writing the big checks. Manufacturing is acting like the new anchor tenant: Eli Lilly in Generation Park, six Hines industrial projects driven by factory demand, and a speculative rail-served building going up next to Samsung in Taylor. Land near highways, rail and workforce is gaining value, and growth on the metro's edges, like Waller, starts to look like housing for the people who will staff these plants.</p>
+      <p>Houston homebuyers, meanwhile, have more choices than they have had in years. The rate jump takes back part of that leverage.</p>
     </div>
   </section>
 
   <section id="houston">
-    <h2>Houston headlines</h2>
+    <h2>Houston</h2>
     <div class="stories">
-
       <article>
         <div class="kicker"><span class="tag">Housing</span><time datetime="2026-09-17">Sept 17</time></div>
         <h3>August home sales fall 11.5% as buyers gain the upper hand</h3>
         <p>Greater Houston closed about 7,100 single-family sales in August, down 11.5% from a year earlier. The median price slipped to $330,000 while the average rose 1.2% to $426,760, a sign that higher-priced homes are still moving. Inventory remains elevated, and apartment rents are down 1.2% year over year.</p>
         <p class="src"><a href="https://hoodline.com/2026/09/houston-home-sales-slide-11-5-but-realtors-say-buyers-are-winning/">Hoodline report</a><a href="https://www.har.com/content/department/mls">HAR monthly update</a></p>
       </article>
-
       <article>
         <div class="kicker"><span class="tag">Sports and entertainment</span><time datetime="2026-09-28">Sept 28</time></div>
         <h3>Houston and Austin compete for an NHL team</h3>
         <p>The Friedkin Group is opening an Austin office in the middle of a contest over whether Austin or Houston lands a hockey franchise. Mayor John Whitmire said earlier this month he is very optimistic Houston will win. An arena deal would be one of the biggest entertainment developments the city has seen in years.</p>
         <p class="src"><a href="https://realtynewsreport.com/hockey-move-friedkin-opening-austin-office/">Friedkin's Austin move</a><a href="https://realtynewsreport.com/mayor-confident-houston-will-be-hockey-winner/">Mayor's comments</a></p>
       </article>
-
       <article>
         <div class="kicker"><span class="tag">Industrial</span><time datetime="2026-09-24">Sept 24</time></div>
         <h3>Hines bets on manufacturing with six industrial projects</h3>
-        <p>Houston-based Hines is developing six industrial buildings totaling more than 2.3 million square feet across Houston, California's Fremont-Newark corridor, Phoenix and other markets. The firm points to reshoring and manufacturing demand as the reason.</p>
+        <p>Houston-based Hines is developing six industrial buildings totaling more than 2.3 million square feet across Houston, California's Fremont-Newark corridor, Phoenix and other markets, pointing to reshoring and manufacturing demand as the reason.</p>
         <p class="src"><a href="https://realtynewsreport.com/manufacturing-prompts-hines-to-develop-industrial/">Realty News Report</a></p>
       </article>
-
-      <article>
-        <div class="kicker"><span class="tag">Leasing</span><time datetime="2026-09-21">Sept 21</time></div>
-        <h3>Wesco takes 376,067 square feet in Channelview</h3>
-        <p>Wesco Distribution signed for a full Class A building at Carpenters Logistics Center in Channelview, with CBRE on the deal. Large-block leases like this keep the east side's port-driven logistics market busy even as other sectors cool.</p>
-        <p class="src"><a href="https://realtynewsreport.com/cbre-leases-channelview-space/">Realty News Report</a></p>
-      </article>
-
       <article>
         <div class="kicker"><span class="tag">Residential growth</span><time datetime="2026-09-17">Sept 15 to 17</time></div>
         <h3>Waller adds more than 1,000 planned homes in one week</h3>
-        <p>M/I Homes bought nearly 230 acres near Waller for about 600 homes, and Inspire Communities began sales at Indigo Skies, a 439-home manufactured housing community in the same area. The far northwest edge of the metro is becoming a real affordability play.</p>
+        <p>M/I Homes bought nearly 230 acres near Waller for about 600 homes, and Inspire Communities began sales at Indigo Skies, a 439-home manufactured housing community nearby. The far northwest edge of the metro is becoming a real affordability play.</p>
         <p class="src"><a href="https://realtynewsreport.com/m-i-homes-to-build-600-homes-in-waller/">M/I Homes deal</a><a href="https://realtynewsreport.com/new-community-brings-439-homes-to-waller/">Indigo Skies</a></p>
       </article>
+    </div>
+  </section>
 
-      <article>
-        <div class="kicker"><span class="tag">Life sciences</span><time datetime="2026-09-22">Sept 22</time></div>
-        <h3>Lilly breaks ground in Generation Park</h3>
-        <p>The $6.5 billion plant is the largest project of its kind in Texas history. See the spotlight below for why this site keeps winning.</p>
-        <p class="src"><a href="#spotlight">Read the spotlight</a></p>
-      </article>
-
+  <section id="deals">
+    <h2>Deal sheet</h2>
+    <p class="intro">Every project and trade in this issue, side by side. Size and value are as reported; blank means not disclosed.</p>
+    <div class="sheet">
+      <table>
+        <thead>
+          <tr><th>Project or deal</th><th>Type</th><th class="num">Size</th><th class="num">Value</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Eli Lilly API plant<span class="where">Generation Park, Houston</span></td><td><span class="pill">Life sciences</span></td><td class="num">236 acres</td><td class="num">$6.5B</td><td>Broke ground Sept 21</td></tr>
+          <tr><td>Westmoore Landing<span class="where">Mooresville, Alabama</span></td><td><span class="pill">Mixed-use</span></td><td class="num"></td><td class="num">$2.2B</td><td>Broke ground Aug 31</td></tr>
+          <tr><td>Brookfield warehouse portfolio to Longpoint<span class="where">Miami-Dade, Florida</span></td><td><span class="pill">Industrial sale</span></td><td class="num">720,000 SF</td><td class="num">$194.9M</td><td>Closed</td></tr>
+          <tr><td>Hines industrial program<span class="where">Houston, Phoenix, Fremont and more</span></td><td><span class="pill">Industrial</span></td><td class="num">2.3M+ SF</td><td class="num"></td><td>In development</td></tr>
+          <tr><td>TaylorPort C by Partners Real Estate<span class="where">Taylor, Texas</span></td><td><span class="pill">Industrial, spec</span></td><td class="num">572,640 SF</td><td class="num"></td><td>In development</td></tr>
+          <tr><td>Wesco Distribution lease<span class="where">Carpenters Logistics Center, Channelview</span></td><td><span class="pill">Industrial lease</span></td><td class="num">376,067 SF</td><td class="num"></td><td>Signed</td></tr>
+          <tr><td>M/I Homes community<span class="where">Waller, Texas</span></td><td><span class="pill">Single-family</span></td><td class="num">~230 acres, 600 homes</td><td class="num"></td><td>Land acquired</td></tr>
+          <tr><td>Indigo Skies<span class="where">Waller, Texas</span></td><td><span class="pill">Manufactured housing</span></td><td class="num">439 homes</td><td class="num"></td><td>Sales open</td></tr>
+          <tr><td>Toyota Stadium east district<span class="where">Frisco, Texas</span></td><td><span class="pill">Mixed-use</span></td><td class="num"></td><td class="num"></td><td>Announced, 2027 start</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
   <section id="national">
-    <h2>Big developments nationwide</h2>
+    <h2>Nationwide</h2>
     <div class="stories">
-
       <article>
         <div class="kicker"><span class="tag">Capital markets</span><time datetime="2026-09-24">Sept 24</time></div>
         <h3>Mortgage rates break 7% for the first time in 20 months</h3>
-        <p>Freddie Mac's 30-year average rose to 7.03% from 6.95% a week earlier, and the 15-year climbed to 6.42%. A year ago the 30-year sat at 6.30%. The 10-year Treasury jumped to 5.11%, its highest in 19 years, which points to continued upward pressure on both home loans and commercial debt.</p>
-        <p class="src"><a href="https://www.freddiemac.com/pmms">Freddie Mac PMMS</a><a href="https://www.foxbusiness.com/economy/mortgage-rates-9-24-2026">Fox Business</a></p>
+        <p>Freddie Mac's 30-year average rose to 7.03% from 6.95% a week earlier, and the 15-year climbed to 6.42%. A year ago the 30-year sat at 6.30%. The 10-year Treasury jumped to 5.11%, its highest in 19 years, pointing to continued pressure on both home loans and commercial debt.</p>
+        <p class="src"><a href="https://www.freddiemac.com/pmms">Freddie Mac</a><a href="https://www.foxbusiness.com/economy/mortgage-rates-9-24-2026">Fox Business</a></p>
       </article>
-
       <article>
         <div class="kicker"><span class="tag">Mixed-use</span><time datetime="2026-09-22">Sept 22</time></div>
         <h3>Frisco plans a new district next to Toyota Stadium</h3>
-        <p>Hunt Sports Development is partnering with Peak Curated Development and VENU on a mixed-use district on the east side of the FC Dallas stadium, with a boutique hotel, restaurants and a convention center. Groundbreaking is targeted for 2027. Stadium districts remain one of the strongest development formats in Texas.</p>
+        <p>Hunt Sports Development is partnering with Peak Curated Development and VENU on a district east of the FC Dallas stadium, with a boutique hotel, restaurants and a convention center. Stadium districts remain one of the strongest development formats in Texas, which matters for Houston's hockey push too.</p>
         <p class="src"><a href="https://finance.yahoo.com/real-estate/articles/hunt-sports-development-announces-plans-113000823.html">Business Wire via Yahoo Finance</a></p>
       </article>
-
       <article>
         <div class="kicker"><span class="tag">Data centers</span><time datetime="2026-09-28">Sept 28</time></div>
         <h3>NAR studies how data centers change local real estate</h3>
         <p>A new National Association of Realtors report finds the effect of data center development on surrounding markets varies widely by location. The scale keeps growing: Meta's Hyperion campus in Louisiana is now planned at 5 gigawatts and more than $50 billion of investment.</p>
         <p class="src"><a href="https://realtynewsreport.com/how-data-centers-impact-realty-nar-report/">NAR report coverage</a><a href="https://en.wikipedia.org/wiki/Hyperion_Data_Center">Hyperion background</a></p>
       </article>
-
-      <article>
-        <div class="kicker"><span class="tag">Industrial</span><time datetime="2026-09-26">Sept 26</time></div>
-        <h3>A 572,640-square-foot spec building rises near Samsung in Taylor</h3>
-        <p>Partners Real Estate is developing TaylorPort C, a rail-served speculative industrial building near the Samsung chip plant outside Austin. Building without a tenant signals confidence that suppliers will follow the big manufacturers into Central Texas.</p>
-        <p class="src"><a href="https://realtynewsreport.com/partners-developing-project-near-samsung-plant/">Realty News Report</a></p>
-      </article>
-
       <article>
         <div class="kicker"><span class="tag">Investment sales</span><time datetime="2026-09-28">Sept 28</time></div>
-        <h3>Brookfield sells a $194.9M Miami industrial portfolio</h3>
-        <p>Longpoint Partners bought about 720,000 square feet of Miami-Dade warehouses from Brookfield. The buildings last traded between 2017 and 2021 for a combined $124.7 million, a useful data point on how much infill industrial has appreciated.</p>
+        <h3>Brookfield sells Miami warehouses at a big markup</h3>
+        <p>Longpoint Partners paid $194.9 million for about 720,000 square feet of Miami-Dade warehouses. The same buildings last traded between 2017 and 2021 for a combined $124.7 million, a useful read on how much infill industrial has appreciated.</p>
         <p class="src"><a href="https://therealdeal.com/data/miami/2026/south-florida-top-real-estate-deals-sept-28-2026/">The Real Deal</a></p>
       </article>
-
-      <article>
-        <div class="kicker"><span class="tag">Master-planned</span><time datetime="2026-09-01">Sept 1</time></div>
-        <h3>$2.2 billion Westmoore Landing breaks ground in Alabama</h3>
-        <p>Construction started on a mixed-use community near historic Mooresville in the Huntsville region, planned with a form-based approach that steps down from active mixed-use areas into neighborhoods with a range of home types.</p>
-        <p class="src"><a href="https://huntsvillebusinessjournal.com/news/2026/09/01/groundbreaking-marks-start-of-2-2-billion-westmoore-landing-development/">Huntsville Business Journal</a></p>
-      </article>
-
     </div>
   </section>
 
-  <section id="spotlight">
-    <div class="spotlight">
-      <h2>Project spotlight: Generation Park</h2>
-      <div class="figs">
-        <div><b>4,300</b><span>acres in the master plan</span></div>
-        <div><b>~$9B</b><span>pharma investment attracted</span></div>
-        <div><b>600+</b><span>permanent jobs at the Lilly plant</span></div>
-      </div>
+  <section id="visit">
+    <h2>Site visit: Generation Park</h2>
+    <div class="visit">
+      <dl>
+        <dt>Master plan</dt><dd>4,300 acres</dd>
+        <dt>Pharma investment attracted</dt><dd>~$9B</dd>
+        <dt>Permanent jobs at the Lilly plant</dt><dd>600+</dd>
+      </dl>
       <div class="col">
         <p>McCord's business park along Beltway 8 in northeast Harris County just landed Eli Lilly's $6.5 billion active pharmaceutical ingredient plant on 236 acres. The facility will make orforglipron, Lilly's oral GLP-1 medicine, and should bring more than 4,000 construction jobs. It follows Bristol Myers Squibb's $2.3 billion plant announced there in August.</p>
-        <p>The lesson for developers is that large, entitled, infrastructure-ready land wins mega-projects. When a company needs to move fast, a site that is ready beats a site that is cheaper. Lilly is also funding training at San Jacinto College's new biotech center on the campus, which solves the workforce question at the same time.</p>
+        <p>The lesson for developers is that large, entitled, infrastructure-ready land wins mega-projects. When a company needs to move fast, a site that is ready beats a site that is cheaper. Lilly is also funding training at San Jacinto College's new biotech center on the campus, which answers the workforce question at the same time.</p>
         <p class="src"><a href="https://realtynewsreport.com/eli-lilly-breaks-ground-on-houston-plant/">Realty News Report</a></p>
       </div>
     </div>
   </section>
 
-  <section id="analyst">
-    <div class="col">
-      <h2>Analyst's corner: stress-test your exit</h2>
-      <p>When the 10-year moves this much in a week, the assumption most likely to be wrong in a model is the exit cap rate. Before you trust any deal you are reviewing for class or a competition:</p>
-      <ol class="steps">
-        <li>Rerun the model with the exit cap 50 and 100 basis points higher than the base case.</li>
-        <li>Check whether the deal still clears its target IRR, or only works if rates come back down.</li>
-        <li>Look at the debt side too. A higher rate can break the debt service coverage test before it breaks returns.</li>
-        <li>Write one sentence on what would have to be true for the base case to hold.</li>
-      </ol>
-      <p>If the deal only works when rates fall, you are making a rate bet, not a real estate bet. That is fine, as long as you know it.</p>
-    </div>
-  </section>
-
-  <section id="coming-up">
-    <h2>Coming up through October 11</h2>
-    <p class="col">The dates worth watching before the next issue. The two rate readings will tell us whether 7% was a spike or the new normal.</p>
-    <ul class="calendar">
-      <li><div class="when">Thu, Oct 1<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>First read on whether the 30-year average holds above 7% after last week's jump. <a href="https://www.freddiemac.com/pmms">Freddie Mac PMMS</a></p></div></li>
-      <li><div class="when">Fri, Oct 2<small>8:30 a.m. ET</small></div><div><h3>September jobs report</h3><p>The Bureau of Labor Statistics releases payrolls and unemployment. A strong number could push Treasury yields and mortgage rates higher. <a href="https://www.bls.gov/schedule/2026/10_sched_list.htm">BLS release calendar</a></p></div></li>
-      <li><div class="when">Thu, Oct 8<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>Second reading after the jobs report, and a good test of where rates settle heading into mid-October. <a href="https://www.freddiemac.com/pmms">Freddie Mac PMMS</a></p></div></li>
-      <li><div class="when">Early Oct<small>Houston</small></div><div><h3>HAR September housing update</h3><p>The Houston Association of Realtors usually posts its monthly report in the second week of the month. This will be the first Houston data that reflects September's rate climb. <a href="https://www.har.com/content/department/mls">HAR market updates</a></p></div></li>
-      <li><div class="when">Sat, Oct 10<small>9 a.m. to noon</small></div><div><h3>Greater Houston REIA monthly meeting</h3><p>Investor networking at the Residence Inn at 10421 Clay Road. A good room for meeting local operators and small-balance investors. <a href="https://greaterhoustonreia.net/events/list/">Event details</a></p></div></li>
-      <li class="later"><div class="when">Wed, Oct 14<small>Just after</small></div><div><h3>Bisnow Houston Multifamily and the September CPI report</h3><p>Bisnow's Houston multifamily event starts at 8 a.m., and the inflation report lands the same morning. Worth a look if you can get away. <a href="https://www.bisnow.com/events/houston">Bisnow Houston events</a></p></div></li>
-    </ul>
-  </section>
-
-  <section id="question">
-    <h2>Question of the week</h2>
-    <p class="question">With rates above 7% and Houston inventory at multiyear highs, would you rather be buying single-family homes or older apartment buildings in Houston right now, and why?</p>
-  </section>
-
-  <section id="join">
-    <div class="join">
-      <h2>Join the Real Estate Club</h2>
-      <p>Open to anyone in the Houston MBA program with an interest in real estate. No dues. We host one signature event each semester and share deals, jobs and news in our group chat all week.</p>
-      <div class="buttons">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfm7e2FvlaoQKlrLaf-QsSh5q1eJGyd-x3Hr_8ReTECwaP9jQ/viewform" target="_blank" rel="noopener">Fill out the interest form</a>
-        <a class="btn alt" href="https://chat.whatsapp.com/Jf6gnrF5uKbHRuntyZtRyz?mode=gi_t" target="_blank" rel="noopener">Join the WhatsApp group</a>
+  <section id="desk">
+    <div class="desk">
+      <h2>Underwriting desk: stress-test your exit</h2>
+      <div class="col">
+        <p>When the 10-year moves this much in a week, the assumption most likely to be wrong in a model is the exit cap rate. Before you trust a deal you are reviewing for class or a case competition:</p>
+        <ol>
+          <li>Rerun the model with the exit cap 50 and 100 basis points higher than the base case.</li>
+          <li>Check whether the deal still clears its target IRR, or only works if rates come back down.</li>
+          <li>Look at the debt side too. A higher rate can break the debt service coverage test before it breaks returns.</li>
+          <li>Write one sentence on what would have to be true for the base case to hold.</li>
+        </ol>
+        <p>If the deal only works when rates fall, you are making a rate bet, not a real estate bet. That is fine, as long as you know it.</p>
       </div>
     </div>
+  </section>
+
+  <section id="calendar">
+    <h2>On the calendar through October 11</h2>
+    <p class="intro">The dates worth watching before the next issue. The two rate readings will show whether 7% was a spike or the new normal.</p>
+    <ul class="calendar">
+      <li><div class="when">Thu, Oct 1<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>First read on whether the 30-year average holds above 7%. <a href="https://www.freddiemac.com/pmms">Freddie Mac</a></p></div></li>
+      <li><div class="when">Fri, Oct 2<small>8:30 a.m. ET</small></div><div><h3>September jobs report</h3><p>A strong number could push Treasury yields and mortgage rates higher. <a href="https://www.bls.gov/schedule/2026/10_sched_list.htm">BLS release calendar</a></p></div></li>
+      <li><div class="when">Thu, Oct 8<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>The first reading after the jobs report. <a href="https://www.freddiemac.com/pmms">Freddie Mac</a></p></div></li>
+      <li><div class="when">Early Oct<small>Houston</small></div><div><h3>HAR September housing update</h3><p>Usually posted in the second week of the month, and the first Houston data to reflect September's rate climb. <a href="https://www.har.com/content/department/mls">HAR market updates</a></p></div></li>
+      <li><div class="when">Sat, Oct 10<small>9 a.m. to noon</small></div><div><h3>Greater Houston REIA monthly meeting</h3><p>Investor networking at the Residence Inn at 10421 Clay Road. <a href="https://greaterhoustonreia.net/events/list/">Event details</a></p></div></li>
+      <li class="later"><div class="when">Wed, Oct 14<small>Just after</small></div><div><h3>Bisnow Houston Multifamily and the September CPI report</h3><p>Bisnow's Houston multifamily event starts at 8 a.m., and the inflation report lands the same morning. <a href="https://www.bisnow.com/events/houston">Bisnow Houston events</a></p></div></li>
+    </ul>
   </section>
 
 </main>
 
 <footer>
-  <span>McCombs Houston MBA Real Estate Club, The Ground Floor</span>
+  <span>The Ground Floor, McCombs Houston MBA Real Estate Club</span>
   <a href="archive.html">Past issues</a>
   <!-- Replace with your club email -->
-  <a href="mailto:you@example.com?subject=The%20Ground%20Floor">Share a deal, story or idea</a>
-  <span>Editorial window: September 15 to 28, 2026</span>
+  <a href="mailto:you@example.com?subject=The%20Ground%20Floor">Send us a deal or story</a>
+  <span>Covering September 15 to 28, 2026</span>
 </footer>
 
 </body>
