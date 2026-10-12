@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Ground Floor | McCombs Houston MBA Real Estate Club | October 12, 2026</title>
+<meta name="description" content="A weekly brief on Houston real estate and the biggest developments nationwide, from the McCombs Houston MBA Real Estate Club.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF0EC; --panel: #FFFFFF; --ink: #14201C; --muted: #55635D; --line: #C8CFC9;
+    --bayou: #1E4D40; --bayou-deep: #163A30; --orange: #BF5700; --on-bayou: #F3F6F3;
+    --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101815; --panel: #16211D; --ink: #E6ECE8; --muted: #9AA8A1; --line: #2B3833;
+      --bayou: #1B4238; --bayou-deep: #122F27; --orange: #E57A2E;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 1.125rem; line-height: 1.68; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration-color: var(--orange); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+  a:hover { color: var(--orange); }
+  a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 2px; }
+
+  .masthead {
+    background-color: var(--bayou);
+    background-image:
+      linear-gradient(rgba(255,255,255,.075) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.075) 1px, transparent 1px),
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 96px 96px, 96px 96px, 24px 24px, 24px 24px;
+    color: var(--on-bayou);
+    padding: 1.5rem 1.25rem 0;
+  }
+  .wrap { max-width: 60rem; margin: 0 auto; }
+  .club { font-family: var(--sans); font-variation-settings: "wdth" 90; font-weight: 600; font-size: .95rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.5rem; opacity: .92; }
+  h1 { font-family: var(--sans); font-variation-settings: "wdth" 66; font-weight: 800; font-size: clamp(3.4rem, 13vw, 8.5rem); line-height: .86; letter-spacing: -.01em; margin: 2.75rem 0 1rem; max-width: 9ch; }
+  .dek { font-size: clamp(1.1rem, 2.4vw, 1.35rem); max-width: 34rem; margin: 0 0 2.25rem; opacity: .95; }
+  .property-line { border: 0; border-top: 2px dashed var(--orange); margin: 0; }
+
+  .tape-wrap { background: var(--bayou-deep); color: var(--on-bayou); padding: 0 1.25rem; }
+  .tape { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .tape div { padding: 1.1rem 1rem 1.2rem; border-left: 1px solid rgba(255,255,255,.14); }
+  .tape div:first-child { border-left: 0; padding-left: 0; }
+  .tape b { display: block; font-family: var(--sans); font-variation-settings: "wdth" 75; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.05; }
+  .tape span { font-family: var(--sans); font-size: .85rem; line-height: 1.35; display: block; margin-top: .3rem; opacity: .85; }
+  .tape-note { font-family: var(--sans); font-size: .78rem; opacity: .7; padding: 0 0 1rem; margin: 0; }
+  @media (max-width: 640px) {
+    .tape { grid-template-columns: 1fr 1fr; }
+    .tape div:nth-child(3) { border-left: 0; padding-left: 0; }
+    .tape div:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.14); }
+  }
+
+  /* Join strip sits right under the header */
+  .join { background: var(--panel); border-bottom: 1px solid var(--line); padding: 1.25rem; }
+  .join .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; }
+  .join p { margin: 0; max-width: 34rem; font-size: 1.02rem; }
+  .join strong { font-family: var(--sans); font-variation-settings: "wdth" 85; font-size: 1.2rem; display: block; line-height: 1.2; margin-bottom: .2rem; }
+  .buttons { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .btn { font-family: var(--sans); font-weight: 650; font-size: .98rem; text-decoration: none; padding: .65rem 1.1rem; border-radius: 3px; background: var(--bayou); color: var(--on-bayou); border: 1.5px solid var(--bayou); }
+  .btn.alt { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+  nav.contents { max-width: 60rem; margin: 0 auto; padding: 1.1rem 1.25rem; font-family: var(--sans); font-size: .95rem; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; border-bottom: 1px solid var(--line); }
+  nav.contents a { text-decoration: none; color: var(--muted); }
+  nav.contents a:hover { color: var(--orange); }
+
+  main { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  section { padding: 3.25rem 0 0; }
+  .col { max-width: 42rem; }
+  h2 { font-family: var(--sans); font-variation-settings: "wdth" 82; font-weight: 700; font-size: clamp(1.7rem, 3.6vw, 2.3rem); line-height: 1.1; margin: 0 0 1rem; }
+  h3 { font-family: var(--sans); font-variation-settings: "wdth" 92; font-weight: 650; font-size: 1.3rem; line-height: 1.25; margin: .3rem 0 .6rem; }
+  p { margin: 0 0 1rem; }
+  .lede { font-size: 1.28rem; line-height: 1.6; }
+  .intro { color: var(--muted); max-width: 42rem; }
+
+  .stories { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
+  @media (max-width: 760px) { .stories { grid-template-columns: 1fr; } }
+  article { border-top: 1px solid var(--line); padding: 1.25rem 0 1.4rem; }
+  .kicker { font-family: var(--sans); font-size: .85rem; font-weight: 600; display: flex; justify-content: space-between; gap: 1rem; }
+  .kicker .tag { color: var(--orange); }
+  .kicker time { color: var(--muted); font-weight: 500; }
+  article p { font-size: 1.05rem; }
+  .src { font-family: var(--sans); font-size: .9rem; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
+
+  /* Deal sheet: the club's running ledger of projects and trades */
+  .sheet { overflow-x: auto; background: var(--panel); border-top: 6px solid var(--bayou); }
+  table { border-collapse: collapse; width: 100%; min-width: 44rem; font-family: var(--sans); font-size: .95rem; }
+  th { text-align: left; font-weight: 600; color: var(--muted); font-size: .85rem; padding: .8rem 1rem; border-bottom: 1px solid var(--line); }
+  td { padding: .8rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td .where { display: block; color: var(--muted); font-size: .85rem; }
+  .pill { font-size: .8rem; font-weight: 600; color: var(--orange); white-space: nowrap; }
+  .sheet-note { font-family: var(--sans); font-size: .82rem; color: var(--muted); margin-top: .6rem; }
+
+  .visit { display: grid; grid-template-columns: 14rem 1fr; gap: 2rem; }
+  @media (max-width: 760px) { .visit { grid-template-columns: 1fr; gap: 1rem; } }
+  .visit dl { margin: 0; font-family: var(--sans); }
+  .visit dt { font-size: .82rem; color: var(--muted); }
+  .visit dd { margin: 0 0 1rem; font-variation-settings: "wdth" 75; font-weight: 700; font-size: 1.9rem; line-height: 1.05; color: var(--bayou); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .visit dd { color: var(--orange); } }
+
+  .desk { background: var(--bayou); color: var(--on-bayou); padding: 1.75rem 1.5rem 1.25rem; }
+  .desk a { color: inherit; }
+  .desk ol { padding-left: 1.3rem; margin: 0 0 1rem; }
+  .desk li { margin-bottom: .5rem; padding-left: .2rem; }
+
+  .calendar { list-style: none; padding: 0; margin: 0; max-width: 46rem; }
+  .calendar li { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1.25rem; padding: 1rem 0; border-top: 1px solid var(--line); }
+  .calendar .when { font-family: var(--sans); font-variation-settings: "wdth" 85; font-weight: 700; color: var(--bayou); line-height: 1.3; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .calendar .when { color: var(--orange); } }
+  .calendar .when small { display: block; font-weight: 500; color: var(--muted); font-size: .85rem; }
+  .calendar h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+  .calendar p { font-size: 1rem; margin: 0; }
+  .calendar .later .when { color: var(--muted); }
+  @media (max-width: 560px) { .calendar li { grid-template-columns: 1fr; gap: .3rem; } }
+
+  footer { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; font-family: var(--sans); font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem 2rem; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="club">
+      <span>McCombs Houston MBA Real Estate Club</span>
+      <span>Week of October 12, 2026</span>
+    </div>
+    <h1>The Ground Floor</h1>
+    <p class="dek">Houston real estate and the country's biggest projects, in one read.</p>
+  </div>
+  <hr class="property-line">
+</header>
+
+<div class="tape-wrap">
+  <div class="wrap">
+    <div class="tape" role="list" aria-label="Market numbers this week">
+      <div role="listitem"><b>7.40%</b><span>30-year mortgage average, a seventh straight weekly rise</span></div>
+      <div role="listitem"><b>5.28%</b><span>10-year Treasury, weekly average</span></div>
+      <div role="listitem"><b>714K SF</b><span>Spec industrial breaking ground near Bush Intercontinental</span></div>
+      <div role="listitem"><b>$1.1B</b><span>Ken Griffin's Wynwood land buy, a Florida record</span></div>
+    </div>
+    <p class="tape-note">Sources: Freddie Mac, Oct 8; Realtor.com via Fox Business; Realty News Report; Mana Common via Fox Business.</p>
+  </div>
+</div>
+
+<div class="join" id="join">
+  <div class="wrap">
+    <p><strong>Join the Real Estate Club</strong>Open to anyone in the McCombs Houston MBA program with an interest in real estate. No dues, one signature event each semester, and deals and news shared all week.</p>
+    <div class="buttons">
+      <a class="btn" href="https://chat.whatsapp.com/Jf6gnrF5uKbHRuntyZtRyz?mode=gi_t" target="_blank" rel="noopener">Join the WhatsApp group</a>
+    </div>
+  </div>
+</div>
+
+<nav class="contents" aria-label="In this issue">
+  <a href="#short">The short version</a>
+  <a href="#houston">Houston</a>
+  <a href="#deals">Deal sheet</a>
+  <a href="#beyond">Beyond Houston</a>
+  <a href="#visit">Site visit</a>
+  <a href="#desk">Underwriting desk</a>
+  <a href="#calendar">On the calendar</a>
+  <a href="archive.html">Past issues</a>
+</nav>
+
+<main>
+
+  <section id="short">
+    <div class="col">
+      <h2>The short version</h2>
+      <p class="lede">Mortgage rates rose for a seventh straight week to 7.40%, the highest since November 2023, and Houston developers kept breaking ground on warehouses anyway.</p>
+      <p>Industrial is the clearest bet in town right now. Portman started a 714,233-square-foot park near Bush Intercontinental Airport, a new spec building is planned just outside Loop 610 in south Houston, and a Fort Bend County building traded for $26.8 million. Developers are building without tenants signed because they expect demand to be there when the buildings deliver in 2027.</p>
+      <p>The other big local story is a comeback attempt. A Sugar Land developer closed on 120 acres at Highway 288 and Beltway 8 in Pearland, a corner where two earlier developers tried and failed to build. Nationally, Ken Griffin paid a record $1.1 billion for land in Miami's Wynwood, and Los Angeles office leasing had its best quarter since 2019.</p>
+    </div>
+  </section>
+
+  <section id="houston">
+    <h2>Houston</h2>
+    <div class="stories">
+      <article>
+        <div class="kicker"><span class="tag">Industrial</span><time datetime="2026-10-10">Oct 10</time></div>
+        <h3>Portman breaks ground on 714,233 square feet near Bush Intercontinental</h3>
+        <p>Gateway 1960 is a three-building park along FM 1960 at Aldine Westfield Road, just north of the airport, with a 440,323-square-foot cross-dock building and two smaller front-load and rear-load buildings. It is set to deliver in the third quarter of 2027, with a ceremonial groundbreaking on October 12. Portman has 6.4 million square feet of industrial under development nationwide.</p>
+        <p class="src"><a href="https://realtynewsreport.com/portman-breaks-ground-on-big-project/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Industrial</span><time datetime="2026-10-09">Oct 9</time></div>
+        <h3>A 321,120-square-foot spec building is planned outside Loop 610</h3>
+        <p>Austin-based Buchanan Capital Partners teamed up with Houston-based Vault Partners on Wildcat Distribution Center at 222 Holmes Road in south Houston. Infill sites close to the Loop are scarce, which is why developers are willing to build there before landing a tenant.</p>
+        <p class="src"><a href="https://realtynewsreport.com/industrial-project-planned-near-loop-610/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Investment sales</span><time datetime="2026-10-10">Recent</time></div>
+        <h3>Trammell Crow venture sells a Fort Bend industrial building for $26.8 million</h3>
+        <p>Trammell Crow Co. and Daiwa House Texas sold Building 3 at Blue Ridge Commerce Center in southwest Houston. The 153,928-square-foot building is leased to Applied Optoelectronics, a reminder that a leased spec building is exactly what investors want to buy.</p>
+        <p class="src"><a href="https://realtynewsreport.com/portman-breaks-ground-on-big-project/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Mixed-use</span><time datetime="2026-10-09">Oct 9</time></div>
+        <h3>The Orchard closes on its Pearland site</h3>
+        <p>A 120-acre mixed-use district is finally moving forward on one of the region's most watched corners. See the site visit below for the full story.</p>
+        <p class="src"><a href="#visit">Read the site visit</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="deals">
+    <h2>Deal sheet</h2>
+    <p class="intro">Every project and trade in this issue, side by side. Size and value are as reported; blank means not disclosed.</p>
+    <div class="sheet">
+      <table>
+        <thead>
+          <tr><th>Project or deal</th><th>Type</th><th class="num">Size</th><th class="num">Value</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mana Wynwood to Ken Griffin<span class="where">Wynwood, Miami</span></td><td><span class="pill">Land</span></td><td class="num">~30 acres</td><td class="num">$1.1B</td><td>Closed</td></tr>
+          <tr><td>Gateway 1960 by Portman<span class="where">Near Bush Intercontinental, Houston</span></td><td><span class="pill">Industrial, spec</span></td><td class="num">714,233 SF</td><td class="num"></td><td>Under construction, Q3 2027</td></tr>
+          <tr><td>Wildcat Distribution Center<span class="where">South Houston, outside Loop 610</span></td><td><span class="pill">Industrial, spec</span></td><td class="num">321,120 SF</td><td class="num"></td><td>Planned</td></tr>
+          <tr><td>Blue Ridge Commerce Center Building 3<span class="where">Fort Bend County</span></td><td><span class="pill">Industrial sale</span></td><td class="num">153,928 SF</td><td class="num">$26.8M</td><td>Sold</td></tr>
+          <tr><td>The Orchard by Planned Community Developers<span class="where">Pearland, Highway 288 and Beltway 8</span></td><td><span class="pill">Mixed-use</span></td><td class="num">120 acres</td><td class="num"></td><td>Land closed</td></tr>
+          <tr><td>HistoryMaker Homes to Century Communities<span class="where">Dallas-Fort Worth</span></td><td><span class="pill">Homebuilder M&amp;A</span></td><td class="num">~25,000 homes built</td><td class="num"></td><td>Closed</td></tr>
+          <tr><td>Raytheon office renewal<span class="where">El Segundo, California</span></td><td><span class="pill">Office lease</span></td><td class="num">144,709 SF</td><td class="num"></td><td>Renewed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="beyond">
+    <h2>Beyond Houston</h2>
+    <div class="stories">
+      <article>
+        <div class="kicker"><span class="tag">Capital markets</span><time datetime="2026-10-08">Oct 8</time></div>
+        <h3>Mortgage rates climb for a seventh straight week to 7.40%</h3>
+        <p>Freddie Mac's 30-year average rose from 7.28%, and the 15-year climbed to 6.73%. A year ago the 30-year sat at 6.30%. Realtor.com pointed to the 10-year Treasury, which averaged 5.28% for the week, driven by inflation worries, a broad bond selloff and heavy government borrowing.</p>
+        <p class="src"><a href="https://www.globenewswire.com/news-release/2026/10/08/3377537/0/en/mortgage-rates-average-7-40.html">Freddie Mac release</a><a href="https://www.foxbusiness.com/economy/mortgage-rates-10-8-2026">Fox Business</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Land</span><time datetime="2026-09-30">Closed Sept 30</time></div>
+        <h3>Ken Griffin pays a record $1.1 billion for Wynwood land</h3>
+        <p>The Citadel founder bought about 30 acres from Moishe Mana in the largest land assemblage deal in Florida history. The site will become a new Carnegie Mellon campus, part of Griffin's record $3 billion gift to the university. Mana reportedly paid about $70 million for the land over roughly 15 years.</p>
+        <p class="src"><a href="https://www.foxbusiness.com/real-estate/inside-ken-griffins-secret-three-year-negotiation-floridas-largest-real-estate-deal-history">Fox Business</a><a href="https://www.credaily.com/?p=223785">CRE Daily</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Homebuilding</span><time datetime="2026-10-08">Oct 8</time></div>
+        <h3>Century Communities buys Texas' oldest production homebuilder</h3>
+        <p>Century acquired substantially all the assets of HistoryMaker Homes, founded in Fort Worth in 1949, tripling its Dallas-Fort Worth community count. When building costs and rates are high, buying a builder with land and lots already in place is often faster than assembling them from scratch.</p>
+        <p class="src"><a href="https://www.builderonline.com/?p=177799">Builder</a><a href="https://dallasexpress.com/business-markets/texas-oldest-private-homebuilder-historymaker-acquired-by-century-communities/">Dallas Express</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Office</span><time datetime="2026-10-07">Oct 7</time></div>
+        <h3>Los Angeles office leasing hits its best quarter since 2019</h3>
+        <p>Tenants signed about 4 million square feet in the third quarter, up 15% from a year earlier, according to Savills. Availability fell to 26.5% and sublease space dropped for an eighth straight quarter. The recovery is uneven, with Century City and Beverly Hills leading while Burbank and Culver City lag.</p>
+        <p class="src"><a href="https://www.credaily.com/?p=223712">CRE Daily</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="visit">
+    <h2>Site visit: The Orchard in Pearland</h2>
+    <div class="visit">
+      <dl>
+        <dt>Site</dt><dd>120 acres</dd>
+        <dt>Retail, dining and entertainment</dt><dd>~250K SF</dd>
+        <dt>Apartments</dt><dd>~1,100</dd>
+      </dl>
+      <div class="col">
+        <p>Sugar Land-based Planned Community Developers closed on the land at the southwest corner of Highway 288 and Beltway 8 after Pearland City Council approved the project. Plans also call for between 150,000 and 300,000 square feet of Class A office, a hotel and conference center, and waterfront restaurants. CBRE will lead retail leasing and JLL will lead office leasing.</p>
+        <p>The backstory is the lesson. PCD is the third developer to put this corner under contract. NewQuest once considered a $350 million project here, and Poag &amp; McEwen bought the land decades ago for a $150 million outdoor shopping center that never got built. This time the deal structure is different: the city requires commercial development before all of the homes can be built, and Pearland would reimburse the developer for the conference center only after the project hits agreed performance benchmarks. When a great site keeps failing, the fix is often in how the deal is structured, not in the site itself.</p>
+        <p class="src"><a href="https://www.connectcre.com/?p=500795">Connect CRE</a><a href="https://www.bisnow.com/houston/news/construction-development/third-developer-reveals-plans-mixed-use-122-acre-pearland-site-134061">Bisnow</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="desk">
+    <div class="desk">
+      <h2>Underwriting desk: how to read a spec industrial deal</h2>
+      <div class="col">
+        <p>Three Houston industrial projects made news this week, and two are being built without a tenant. Before you believe a spec deal pencils, check these four things:</p>
+        <ol>
+          <li>Lease-up time. How many months does the model assume before the building is full, and how much free rent will it take to get there?</li>
+          <li>Building fit. Does the size, depth and loading match what tenants in that submarket actually lease? Gateway 1960 offers cross-dock, front-load and rear-load options for exactly this reason.</li>
+          <li>Carry cost. Every extra month of vacancy is another month of construction loan interest, and at today's rates that adds up fast.</li>
+          <li>Competing supply. Count the other spec buildings delivering nearby at the same time, since they will be chasing the same tenants.</li>
+        </ol>
+        <p>A spec building that leases quickly becomes the kind of asset investors pay up for, like the Blue Ridge sale this week. One that sits empty can eat its own returns.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <h2>On the calendar through October 28</h2>
+    <p class="intro">The dates worth watching before the next issue.</p>
+    <ul class="calendar">
+      <li><div class="when">Mon, Oct 12<small>Houston</small></div><div><h3>Gateway 1960 ceremonial groundbreaking</h3><p>Portman marks the official start of its industrial park near Bush Intercontinental. <a href="https://realtynewsreport.com/portman-breaks-ground-on-big-project/">Project details</a></p></div></li>
+      <li><div class="when">Wed, Oct 14<small>Morning</small></div><div><h3>September CPI, the Fed's Beige Book and Bisnow Houston Multifamily</h3><p>The inflation report is the last big data point before the Fed meets, and Bisnow's Houston multifamily event starts at 8 a.m. <a href="https://www.bisnow.com/events/houston">Bisnow Houston events</a></p></div></li>
+      <li><div class="when">Mid-Oct<small>Houston</small></div><div><h3>HAR September housing update</h3><p>The first Houston sales data to reflect September's rate climb. <a href="https://www.har.com/content/department/mls">HAR market updates</a></p></div></li>
+      <li><div class="when">Thu, Oct 15<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>Can the seven-week climb finally break after the inflation report? <a href="https://www.freddiemac.com/pmms">Freddie Mac</a></p></div></li>
+      <li><div class="when">Thu, Oct 22<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>The last reading before the Fed decision. <a href="https://www.freddiemac.com/pmms">Freddie Mac</a></p></div></li>
+      <li class="later"><div class="when">Wed, Oct 28<small>2 p.m. ET</small></div><div><h3>Federal Reserve rate decision</h3><p>The Fed raised rates to 3.75% to 4% in September. As of early October, futures pointed to a hold, with roughly a one in five chance of another hike. <a href="https://www.federalreserve.gov/newsevents/2026-october.htm">Fed calendar</a></p></div></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <span>The Ground Floor, McCombs Houston MBA Real Estate Club</span>
+  <a href="archive.html">Past issues</a>
+  <!-- Replace with your club email -->
+  <a href="mailto:you@example.com?subject=The%20Ground%20Floor">Send us a deal or story</a>
+  <span>Covering October 5 to 11, 2026</span>
+</footer>
+
+</body>
+</html>
