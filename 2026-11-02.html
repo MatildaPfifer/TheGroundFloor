@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Ground Floor | McCombs Houston MBA Real Estate Club | November 2, 2026</title>
+<meta name="description" content="A weekly brief on Houston real estate and the biggest developments nationwide, from the McCombs Houston MBA Real Estate Club.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF0EC; --panel: #FFFFFF; --ink: #14201C; --muted: #55635D; --line: #C8CFC9;
+    --bayou: #1E4D40; --bayou-deep: #163A30; --orange: #BF5700; --on-bayou: #F3F6F3;
+    --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101815; --panel: #16211D; --ink: #E6ECE8; --muted: #9AA8A1; --line: #2B3833;
+      --bayou: #1B4238; --bayou-deep: #122F27; --orange: #E57A2E;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 1.125rem; line-height: 1.68; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration-color: var(--orange); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+  a:hover { color: var(--orange); }
+  a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 2px; }
+
+  .masthead {
+    background-color: var(--bayou);
+    background-image:
+      linear-gradient(rgba(255,255,255,.075) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.075) 1px, transparent 1px),
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 96px 96px, 96px 96px, 24px 24px, 24px 24px;
+    color: var(--on-bayou);
+    padding: 1.5rem 1.25rem 0;
+  }
+  .wrap { max-width: 60rem; margin: 0 auto; }
+  .club { font-family: var(--sans); font-variation-settings: "wdth" 90; font-weight: 600; font-size: .95rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.5rem; opacity: .92; }
+  h1 { font-family: var(--sans); font-variation-settings: "wdth" 66; font-weight: 800; font-size: clamp(3.4rem, 13vw, 8.5rem); line-height: .86; letter-spacing: -.01em; margin: 2.75rem 0 1rem; max-width: 9ch; }
+  .dek { font-size: clamp(1.1rem, 2.4vw, 1.35rem); max-width: 34rem; margin: 0 0 2.25rem; opacity: .95; }
+  .property-line { border: 0; border-top: 2px dashed var(--orange); margin: 0; }
+
+  .tape-wrap { background: var(--bayou-deep); color: var(--on-bayou); padding: 0 1.25rem; }
+  .tape { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .tape div { padding: 1.1rem 1rem 1.2rem; border-left: 1px solid rgba(255,255,255,.14); }
+  .tape div:first-child { border-left: 0; padding-left: 0; }
+  .tape b { display: block; font-family: var(--sans); font-variation-settings: "wdth" 75; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.05; }
+  .tape span { font-family: var(--sans); font-size: .85rem; line-height: 1.35; display: block; margin-top: .3rem; opacity: .85; }
+  .tape-note { font-family: var(--sans); font-size: .78rem; opacity: .7; padding: 0 0 1rem; margin: 0; }
+  @media (max-width: 640px) {
+    .tape { grid-template-columns: 1fr 1fr; }
+    .tape div:nth-child(3) { border-left: 0; padding-left: 0; }
+    .tape div:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.14); }
+  }
+
+  /* Join strip sits right under the header */
+  .join { background: var(--panel); border-bottom: 1px solid var(--line); padding: 1.25rem; }
+  .join .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; }
+  .join p { margin: 0; max-width: 34rem; font-size: 1.02rem; }
+  .join strong { font-family: var(--sans); font-variation-settings: "wdth" 85; font-size: 1.2rem; display: block; line-height: 1.2; margin-bottom: .2rem; }
+  .buttons { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .btn { font-family: var(--sans); font-weight: 650; font-size: .98rem; text-decoration: none; padding: .65rem 1.1rem; border-radius: 3px; background: var(--bayou); color: var(--on-bayou); border: 1.5px solid var(--bayou); }
+  .btn.alt { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+  nav.contents { max-width: 60rem; margin: 0 auto; padding: 1.1rem 1.25rem; font-family: var(--sans); font-size: .95rem; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; border-bottom: 1px solid var(--line); }
+  nav.contents a { text-decoration: none; color: var(--muted); }
+  nav.contents a:hover { color: var(--orange); }
+
+  main { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  section { padding: 3.25rem 0 0; }
+  .col { max-width: 42rem; }
+  h2 { font-family: var(--sans); font-variation-settings: "wdth" 82; font-weight: 700; font-size: clamp(1.7rem, 3.6vw, 2.3rem); line-height: 1.1; margin: 0 0 1rem; }
+  h3 { font-family: var(--sans); font-variation-settings: "wdth" 92; font-weight: 650; font-size: 1.3rem; line-height: 1.25; margin: .3rem 0 .6rem; }
+  p { margin: 0 0 1rem; }
+  .lede { font-size: 1.28rem; line-height: 1.6; }
+  .intro { color: var(--muted); max-width: 42rem; }
+
+  .stories { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
+  @media (max-width: 760px) { .stories { grid-template-columns: 1fr; } }
+  article { border-top: 1px solid var(--line); padding: 1.25rem 0 1.4rem; }
+  .kicker { font-family: var(--sans); font-size: .85rem; font-weight: 600; display: flex; justify-content: space-between; gap: 1rem; }
+  .kicker .tag { color: var(--orange); }
+  .kicker time { color: var(--muted); font-weight: 500; }
+  article p { font-size: 1.05rem; }
+  .src { font-family: var(--sans); font-size: .9rem; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
+
+  /* Deal sheet: the club's running ledger of projects and trades */
+  .sheet { overflow-x: auto; background: var(--panel); border-top: 6px solid var(--bayou); }
+  table { border-collapse: collapse; width: 100%; min-width: 44rem; font-family: var(--sans); font-size: .95rem; }
+  th { text-align: left; font-weight: 600; color: var(--muted); font-size: .85rem; padding: .8rem 1rem; border-bottom: 1px solid var(--line); }
+  td { padding: .8rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td .where { display: block; color: var(--muted); font-size: .85rem; }
+  .pill { font-size: .8rem; font-weight: 600; color: var(--orange); white-space: nowrap; }
+  .sheet-note { font-family: var(--sans); font-size: .82rem; color: var(--muted); margin-top: .6rem; }
+
+  .visit { display: grid; grid-template-columns: 14rem 1fr; gap: 2rem; }
+  @media (max-width: 760px) { .visit { grid-template-columns: 1fr; gap: 1rem; } }
+  .visit dl { margin: 0; font-family: var(--sans); }
+  .visit dt { font-size: .82rem; color: var(--muted); }
+  .visit dd { margin: 0 0 1rem; font-variation-settings: "wdth" 75; font-weight: 700; font-size: 1.9rem; line-height: 1.05; color: var(--bayou); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .visit dd { color: var(--orange); } }
+
+  .desk { background: var(--bayou); color: var(--on-bayou); padding: 1.75rem 1.5rem 1.25rem; }
+  .desk a { color: inherit; }
+  .desk ol { padding-left: 1.3rem; margin: 0 0 1rem; }
+  .desk li { margin-bottom: .5rem; padding-left: .2rem; }
+
+  .calendar { list-style: none; padding: 0; margin: 0; max-width: 46rem; }
+  .calendar li { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1.25rem; padding: 1rem 0; border-top: 1px solid var(--line); }
+  .calendar .when { font-family: var(--sans); font-variation-settings: "wdth" 85; font-weight: 700; color: var(--bayou); line-height: 1.3; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .calendar .when { color: var(--orange); } }
+  .calendar .when small { display: block; font-weight: 500; color: var(--muted); font-size: .85rem; }
+  .calendar h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+  .calendar p { font-size: 1rem; margin: 0; }
+  .calendar .later .when { color: var(--muted); }
+  @media (max-width: 560px) { .calendar li { grid-template-columns: 1fr; gap: .3rem; } }
+
+  footer { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; font-family: var(--sans); font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem 2rem; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="club">
+      <span>McCombs Houston MBA Real Estate Club</span>
+      <span>Week of November 2, 2026</span>
+    </div>
+    <h1>The Ground Floor</h1>
+    <p class="dek">Houston real estate and the country's biggest projects, in one read.</p>
+  </div>
+  <hr class="property-line">
+</header>
+
+<div class="tape-wrap">
+  <div class="wrap">
+    <div class="tape" role="list" aria-label="Market numbers this week">
+      <div role="listitem"><b>7.24%</b><span>30-year mortgage average, down two weeks in a row</span></div>
+      <div role="listitem"><b>3.75&ndash;4%</b><span>Fed funds range, held in a 10 to 2 vote on Oct 28</span></div>
+      <div role="listitem"><b>2.7M SF</b><span>Northwoods Industrial Park, the biggest industrial campus sale in Houston history</span></div>
+      <div role="listitem"><b>No. 1</b><span>Houston's rank for 2027 homebuilding prospects among 81 markets</span></div>
+    </div>
+    <p class="tape-note">Sources: Freddie Mac via RateZip, Oct 29; Federal Reserve; Stream Realty Partners; ULI and PwC Emerging Trends in Real Estate 2027.</p>
+  </div>
+</div>
+
+<div class="join" id="join">
+  <div class="wrap">
+    <p><strong>Join the Real Estate Club</strong>Open to anyone in the McCombs Houston MBA program with an interest in real estate. No dues, one signature event each semester, and deals and news shared all week.</p>
+    <div class="buttons">
+      <a class="btn" href="https://chat.whatsapp.com/Jf6gnrF5uKbHRuntyZtRyz?mode=gi_t" target="_blank" rel="noopener">Join the WhatsApp group</a>
+    </div>
+  </div>
+</div>
+
+<nav class="contents" aria-label="In this issue">
+  <a href="#short">The short version</a>
+  <a href="#houston">Houston</a>
+  <a href="#deals">Deal sheet</a>
+  <a href="#beyond">Beyond Houston</a>
+  <a href="#midterms">Midterms</a>
+  <a href="#visit">Site visit</a>
+  <a href="#desk">Underwriting desk</a>
+  <a href="#calendar">On the calendar</a>
+  <a href="archive.html">Past issues</a>
+</nav>
+
+<main>
+
+  <section id="short">
+    <div class="col">
+      <h2>The short version</h2>
+      <p class="lede">Mortgage rates eased for two straight weeks to 7.24%, the Fed held steady in a split vote, and Houston just recorded the biggest industrial campus sale in its history.</p>
+      <p>Industrial remains Houston's strongest story. A 64-building, crane-served park in northwest Houston traded to a joint venture of Adkisson Group and PCCP, a southeast Houston warehouse project sold ahead of schedule after an unsolicited offer, and new construction financing closed in north Houston. Investors are paying up for buildings that are hard to replicate.</p>
+      <p>The industry also gave Houston a strong vote of confidence. ULI and PwC's annual Emerging Trends survey ranked Houston first in the country for homebuilding prospects in 2027 and sixth overall. Meanwhile, the demolition of the 132-year-old Kirby Mansion in Midtown was a reminder that Houston's lack of zoning cuts both ways.</p>
+      <p>Housing was also on the ballot in Tuesday's midterms. Florida voters approved a major homestead tax break, California approved new housing bonds and down-payment help, and San Francisco voted on several real estate tax measures. Early results are below.</p>
+    </div>
+  </section>
+
+  <section id="houston">
+    <h2>Houston</h2>
+    <div class="stories">
+      <article>
+        <div class="kicker"><span class="tag">Outlook</span><time datetime="2026-11-02">Nov 2</time></div>
+        <h3>Houston ranks first for homebuilding in ULI and PwC's 2027 outlook</h3>
+        <p>The Emerging Trends in Real Estate report, based on input from nearly 1,500 investors, developers, lenders and advisors, put Houston at the top of 81 markets for homebuilding prospects and sixth overall. PwC's Andrew Alperstein credited Houston's more diversified economy, its port, energy and industrial demand, and low barriers to entry. Houston ranked first overall in 2015, then fell to 30th after the oil bust.</p>
+        <p class="src"><a href="https://realtynewsreport.com/forecast-houston-to-lead-nation-in-homebuilding-in-2027/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Preservation</span><time datetime="2026-11-02">Nov 2</time></div>
+        <h3>The historic Kirby Mansion is demolished in Midtown</h3>
+        <p>After 132 years, lumber baron John Henry Kirby's mansion at 2000 Smith is gone. Demolition started in late October, was halted by the city over permits, then resumed and finished on November 2. The buyer has ties to a convenience store and gas station chain, though a gas station has not been confirmed. The city is separately proposing new rules on where gas stations can be built.</p>
+        <p class="src"><a href="https://realtynewsreport.com/historic-kirby-mansion-demolished-to-make-way-for-a-gas-station/">Realty News Report</a><a href="https://abc13.com/post/demolition-resumes-historic-kirby-mansion-following-pushback-preservationists-proper-permits/20008974/">ABC13</a><a href="https://www.fox26houston.com/news/houston-proposes-new-gas-station-restrictions-after-riverside-terrace-residents-push-back-against-development">Fox 26 on gas station rules</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Industrial</span><time datetime="2026-11-03">Nov 3</time></div>
+        <h3>Port 225 sells early and a nine-building park gets financed</h3>
+        <p>Cabot Properties bought Port 225 Commerce Center, a 484,056-square-foot development near the Port of Houston, from Brightshore Capital after an unsolicited offer, ahead of Brightshore's original plan. Separately, Adkisson Group secured construction financing for Commerce Center Industrial Park, a 509,250-square-foot, nine-building project at FM 1960 and Aldine Westfield Road.</p>
+        <p class="src"><a href="https://realtynewsreport.com/massive-64-building-industrial-park-sold-in-biggest-deal-ever/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Industrial</span><time datetime="2026-11-03">Nov 3</time></div>
+        <h3>Northwoods Industrial Park sets a Houston record</h3>
+        <p>The largest known industrial campus sale in the region by square footage and acreage. See the site visit below for why investors wanted it.</p>
+        <p class="src"><a href="#visit">Read the site visit</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="deals">
+    <h2>Deal sheet</h2>
+    <p class="intro">Every project and trade in this issue, side by side. Size and value are as reported; blank means not disclosed.</p>
+    <div class="sheet">
+      <table>
+        <thead>
+          <tr><th>Project or deal</th><th>Type</th><th class="num">Size</th><th class="num">Value</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Northwoods Industrial Park to Adkisson Group and PCCP<span class="where">Northwest Houston</span></td><td><span class="pill">Industrial sale</span></td><td class="num">2.7M SF, ~230 acres</td><td class="num"></td><td>Closed</td></tr>
+          <tr><td>Commerce Center Industrial Park by Adkisson Group<span class="where">North Houston</span></td><td><span class="pill">Industrial</span></td><td class="num">509,250 SF</td><td class="num"></td><td>Construction financing closed</td></tr>
+          <tr><td>Port 225 Commerce Center to Cabot Properties<span class="where">Southeast Houston</span></td><td><span class="pill">Industrial sale</span></td><td class="num">484,056 SF</td><td class="num"></td><td>Closed</td></tr>
+          <tr><td>Two new communities by Tri Pointe Homes<span class="where">Houston area</span></td><td><span class="pill">Single-family</span></td><td class="num">Hundreds of homes</td><td class="num"></td><td>Started</td></tr>
+          <tr><td>Citadel Apartments refinance<span class="where">The Heights</span></td><td><span class="pill">Multifamily debt</span></td><td class="num"></td><td class="num"></td><td>Bridge loan closed</td></tr>
+          <tr><td>Kirby Mansion site<span class="where">2000 Smith, Midtown</span></td><td><span class="pill">Redevelopment</span></td><td class="num"></td><td class="num"></td><td>Demolished</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="beyond">
+    <h2>Beyond Houston</h2>
+    <div class="stories">
+      <article>
+        <div class="kicker"><span class="tag">Capital markets</span><time datetime="2026-10-29">Oct 29</time></div>
+        <h3>Mortgage rates ease for a second straight week</h3>
+        <p>Freddie Mac's 30-year average fell to 7.24% from 7.32% the week before, which itself was down from 7.40%. It is a modest break after seven straight weekly increases through early October, but rates remain near their highest level since late 2023.</p>
+        <p class="src"><a href="https://www.aol.com/articles/where-did-mortgage-rates-land-145516000.html">RateZip via AOL</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Economy</span><time datetime="2026-10-28">Oct 28</time></div>
+        <h3>The Fed holds rates steady, but the vote was split</h3>
+        <p>The Federal Reserve kept its target range at 3.75% to 4% in a 10 to 2 vote, after raising rates in September. Markets have started pricing in a possible hike at the next meeting on December 9, when the Fed will also release new projections.</p>
+        <p class="src"><a href="https://admiralmarkets.com/analytics/traders-blog/fomc-october-2026-fed-holds-rates">Admirals</a><a href="https://www.aljazeera.com/economy/2026/10/28/fed-leaves-interest-rates-unchanged-despite-inflation-in-the-us">Al Jazeera</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Housing</span><time datetime="2026-11-02">Nov 2</time></div>
+        <h3>Homeowners with 3% mortgages are still not selling</h3>
+        <p>Realtor.com's latest mortgage data shows 19.2% of outstanding mortgages carry a rate below 3%, and loans taken out between mid-2019 and mid-2022 now make up a record 42.8% of the market. Only 27.8% of outstanding loans were originated after rates began rising in mid-2022. The lock-in is easing, but slowly, which keeps resale inventory tight.</p>
+        <p class="src"><a href="https://realtynewsreport.com/homeowners-with-3-mortgages-refuse-to-sell/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Outlook</span><time datetime="2026-11-02">Nov 2</time></div>
+        <h3>Dallas-Fort Worth tops the national rankings, and Las Vegas falls hard</h3>
+        <p>In the same Emerging Trends report, Dallas-Fort Worth ranked first overall, followed by Nashville, Miami, Raleigh-Durham and San Francisco. Las Vegas dropped from 28th to 78th as tourism slumped to its weakest year since the pandemic. Texas markets continue to dominate investor sentiment.</p>
+        <p class="src"><a href="https://realtynewsreport.com/forecast-houston-to-lead-nation-in-homebuilding-in-2027/">Realty News Report</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="midterms">
+    <h2>Midterms: housing on the ballot</h2>
+    <p class="intro">Real estate measures from the November 3 election, based on early and unofficial results as of November 4. Counts may change.</p>
+    <div class="stories">
+      <article>
+        <div class="kicker"><span class="tag">Property tax</span><time datetime="2026-11-03">Florida</time></div>
+        <h3>Florida approves a much bigger homestead exemption</h3>
+        <p>Amendment 3 passed with broad support. The share of a primary home's value exempt from non-school property taxes will rise from $50,000 to $150,000 in 2027, then to $250,000 in 2028, which should cut many homeowners' annual tax bills significantly. Watch for how local governments make up the lost revenue.</p>
+        <p class="src"><a href="https://qz.com/2026-ballot-measures-tax-housing-wunc">WUNC via Quartz</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Housing finance</span><time datetime="2026-11-03">California</time></div>
+        <h3>California backs housing bonds and down-payment help</h3>
+        <p>Voters approved Proposition 1, which lets the state borrow $11.25 billion for housing, mostly rental construction and renovation with set-asides for affordable and supportive housing. They also approved Proposition 37, which creates a fund offering down-payment loans to middle-class buyers that are repaid to the state over time.</p>
+        <p class="src"><a href="https://calmatters.org/politics/elections/2026/11/california-election-result-propositions/">CalMatters</a><a href="https://qz.com/2026-ballot-measures-tax-housing-wunc">WUNC via Quartz</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Transfer taxes</span><time datetime="2026-11-03">San Francisco</time></div>
+        <h3>San Francisco votes on real estate taxes and affordable housing</h3>
+        <p>A measure to more than double city funding for a key affordable housing fund passed with 80% of the vote, and a measure ending a partial transfer tax exemption on some foreclosures passed with 79%. Proposition I, which would steer half of the tax on property sales above $10 million to affordable and social housing, was trailing with 45% in early returns.</p>
+        <p class="src"><a href="https://www.sfchronicle.com/election/article/sf-ballot-measures-november-election-22501554.php">San Francisco Chronicle</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Fair housing</span><time datetime="2026-11-03">Akron, Ohio</time></div>
+        <h3>Akron passes two housing access measures</h3>
+        <p>Issue 12, which treats criminal history as a protected class in housing, passed narrowly, 51% to 49%, in unofficial results, and Issue 11 also passed. Real estate associations, the local chamber and the mayor opposed both, and opponents have said they plan to sue. City Council now has to write the legislation.</p>
+        <p class="src"><a href="https://signalakron.org/issue-11-12-housing-charter-amendement-akron-ohio-election-results-november-2026/">Signal Akron</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="visit">
+    <h2>Site visit: Northwoods Industrial Park</h2>
+    <div class="visit">
+      <dl>
+        <dt>Industrial space</dt><dd>2.7M SF</dd>
+        <dt>Buildings</dt><dd>64</dd>
+        <dt>Occupied</dt><dd>98%</dd>
+      </dl>
+      <div class="col">
+        <p>The Texas Development Company sold this roughly 230-acre campus near Highway 290 and the Sam Houston Tollway to a joint venture of Adkisson Group and PCCP. Stream Realty Partners says it is the largest known industrial campus sale in Greater Houston by both square footage and acreage. Stream's Jon Farris represented the seller and will lead leasing, and the late Travis Land of Partners Real Estate represented the buyer.</p>
+        <p>The lesson is in what makes the park hard to copy. Every building has bridge cranes rated from 5 to 75 tons, the campus has a Union Pacific rail spur, heavy power and large yards, and it sits outside both the 100-year and 500-year floodplains. Farris said demand for crane-served space in Houston has never been higher. Features like these take years and serious money to build, which is why tenants stay and buyers compete for them.</p>
+        <p class="src"><a href="https://realtynewsreport.com/massive-64-building-industrial-park-sold-in-biggest-deal-ever/">Realty News Report</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="desk">
+    <div class="desk">
+      <h2>Underwriting desk: valuing a hard-to-replicate asset</h2>
+      <div class="col">
+        <p>Brokers love calling a property "one of one." Here is how to test whether the special features actually support the price:</p>
+        <ol>
+          <li>Price the features separately. Estimate what it would cost today to add cranes, extra power and rail access to a standard building. That premium is what you are really paying for.</li>
+          <li>Check the tenant pool. Specialized buildings attract fewer tenants, but those tenants are stickier because moving heavy equipment is expensive. Look at renewal history, not just occupancy.</li>
+          <li>Count the competition. If no one can easily build the same thing nearby, rents have room to grow. If a new crane-served park is on the drawing board, the premium shrinks.</li>
+          <li>Do not skip the site basics. Floodplain status, insurance cost and road access can matter as much as the buildings themselves in Houston.</li>
+        </ol>
+        <p>Scarcity is only valuable if tenants will pay for it. Make the seller prove it with lease data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <h2>On the calendar through November 15</h2>
+    <p class="intro">The dates worth watching before the next issue.</p>
+    <ul class="calendar">
+      <li><div class="when">Thu, Nov 5<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>Can rates fall for a third straight week? <a href="https://www.freddiemac.com/pmms">Freddie Mac</a></p></div></li>
+      <li><div class="when">Fri, Nov 6<small>8:30 a.m. ET</small></div><div><h3>October jobs report</h3><p>A strong number would add to the case for a December hike. <a href="https://www.bls.gov/schedule/news_release/empsit.htm">BLS schedule</a></p></div></li>
+      <li><div class="when">Tue, Nov 10<small>Nationwide</small></div><div><h3>October CPI report</h3><p>The first inflation reading since the Fed's October meeting, and a key input for December. <a href="https://www.bls.gov/schedule/news_release/cpi.htm">BLS schedule</a></p></div></li>
+      <li><div class="when">Thu, Nov 12<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>The first reading after the inflation report. <a href="https://www.freddiemac.com/pmms">Freddie Mac</a></p></div></li>
+      <li><div class="when">Mid-Nov<small>Houston</small></div><div><h3>HAR October housing update</h3><p>Shows whether Houston sales kept sliding as rates peaked in early October. <a href="https://www.har.com/content/department/mls">HAR market updates</a></p></div></li>
+      <li class="later"><div class="when">Wed, Dec 9<small>Looking ahead</small></div><div><h3>Federal Reserve rate decision</h3><p>The next Fed meeting, with updated economic projections. <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">Fed calendar</a></p></div></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <span>The Ground Floor, McCombs Houston MBA Real Estate Club</span>
+  <a href="archive.html">Past issues</a>
+  <!-- Replace with your club email -->
+  <a href="mailto:you@example.com?subject=The%20Ground%20Floor">Send us a deal or story</a>
+  <span>Covering October 21 to November 3, 2026</span>
+</footer>
+
+</body>
+</html>
