@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Ground Floor | McCombs Houston MBA Real Estate Club | November 9, 2026</title>
+<meta name="description" content="A weekly brief on Houston real estate and the biggest developments nationwide, from the McCombs Houston MBA Real Estate Club.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #EEF0EC; --panel: #FFFFFF; --ink: #14201C; --muted: #55635D; --line: #C8CFC9;
+    --bayou: #1E4D40; --bayou-deep: #163A30; --orange: #BF5700; --on-bayou: #F3F6F3;
+    --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101815; --panel: #16211D; --ink: #E6ECE8; --muted: #9AA8A1; --line: #2B3833;
+      --bayou: #1B4238; --bayou-deep: #122F27; --orange: #E57A2E;
+    }
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--serif); font-size: 1.125rem; line-height: 1.68; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration-color: var(--orange); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+  a:hover { color: var(--orange); }
+  a:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 2px; }
+
+  .masthead {
+    background-color: var(--bayou);
+    background-image:
+      linear-gradient(rgba(255,255,255,.075) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.075) 1px, transparent 1px),
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 96px 96px, 96px 96px, 24px 24px, 24px 24px;
+    color: var(--on-bayou);
+    padding: 1.5rem 1.25rem 0;
+  }
+  .wrap { max-width: 60rem; margin: 0 auto; }
+  .club { font-family: var(--sans); font-variation-settings: "wdth" 90; font-weight: 600; font-size: .95rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.5rem; opacity: .92; }
+  h1 { font-family: var(--sans); font-variation-settings: "wdth" 66; font-weight: 800; font-size: clamp(3.4rem, 13vw, 8.5rem); line-height: .86; letter-spacing: -.01em; margin: 2.75rem 0 1rem; max-width: 9ch; }
+  .dek { font-size: clamp(1.1rem, 2.4vw, 1.35rem); max-width: 34rem; margin: 0 0 2.25rem; opacity: .95; }
+  .property-line { border: 0; border-top: 2px dashed var(--orange); margin: 0; }
+
+  .tape-wrap { background: var(--bayou-deep); color: var(--on-bayou); padding: 0 1.25rem; }
+  .tape { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .tape div { padding: 1.1rem 1rem 1.2rem; border-left: 1px solid rgba(255,255,255,.14); }
+  .tape div:first-child { border-left: 0; padding-left: 0; }
+  .tape b { display: block; font-family: var(--sans); font-variation-settings: "wdth" 75; font-weight: 700; font-size: clamp(1.6rem, 4vw, 2.3rem); line-height: 1.05; }
+  .tape span { font-family: var(--sans); font-size: .85rem; line-height: 1.35; display: block; margin-top: .3rem; opacity: .85; }
+  .tape-note { font-family: var(--sans); font-size: .78rem; opacity: .7; padding: 0 0 1rem; margin: 0; }
+  @media (max-width: 640px) {
+    .tape { grid-template-columns: 1fr 1fr; }
+    .tape div:nth-child(3) { border-left: 0; padding-left: 0; }
+    .tape div:nth-child(n+3) { border-top: 1px solid rgba(255,255,255,.14); }
+  }
+
+  /* Join strip sits right under the header */
+  .join { background: var(--panel); border-bottom: 1px solid var(--line); padding: 1.25rem; }
+  .join .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; }
+  .join p { margin: 0; max-width: 34rem; font-size: 1.02rem; }
+  .join strong { font-family: var(--sans); font-variation-settings: "wdth" 85; font-size: 1.2rem; display: block; line-height: 1.2; margin-bottom: .2rem; }
+  .buttons { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .btn { font-family: var(--sans); font-weight: 650; font-size: .98rem; text-decoration: none; padding: .65rem 1.1rem; border-radius: 3px; background: var(--bayou); color: var(--on-bayou); border: 1.5px solid var(--bayou); }
+  .btn.alt { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+  nav.contents { max-width: 60rem; margin: 0 auto; padding: 1.1rem 1.25rem; font-family: var(--sans); font-size: .95rem; display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; border-bottom: 1px solid var(--line); }
+  nav.contents a { text-decoration: none; color: var(--muted); }
+  nav.contents a:hover { color: var(--orange); }
+
+  main { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+  section { padding: 3.25rem 0 0; }
+  .col { max-width: 42rem; }
+  h2 { font-family: var(--sans); font-variation-settings: "wdth" 82; font-weight: 700; font-size: clamp(1.7rem, 3.6vw, 2.3rem); line-height: 1.1; margin: 0 0 1rem; }
+  h3 { font-family: var(--sans); font-variation-settings: "wdth" 92; font-weight: 650; font-size: 1.3rem; line-height: 1.25; margin: .3rem 0 .6rem; }
+  p { margin: 0 0 1rem; }
+  .lede { font-size: 1.28rem; line-height: 1.6; }
+  .intro { color: var(--muted); max-width: 42rem; }
+
+  .stories { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
+  @media (max-width: 760px) { .stories { grid-template-columns: 1fr; } }
+  article { border-top: 1px solid var(--line); padding: 1.25rem 0 1.4rem; }
+  .kicker { font-family: var(--sans); font-size: .85rem; font-weight: 600; display: flex; justify-content: space-between; gap: 1rem; }
+  .kicker .tag { color: var(--orange); }
+  .kicker time { color: var(--muted); font-weight: 500; }
+  article p { font-size: 1.05rem; }
+  .src { font-family: var(--sans); font-size: .9rem; margin: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.1rem; }
+
+  /* Deal sheet: the club's running ledger of projects and trades */
+  .sheet { overflow-x: auto; background: var(--panel); border-top: 6px solid var(--bayou); }
+  table { border-collapse: collapse; width: 100%; min-width: 44rem; font-family: var(--sans); font-size: .95rem; }
+  th { text-align: left; font-weight: 600; color: var(--muted); font-size: .85rem; padding: .8rem 1rem; border-bottom: 1px solid var(--line); }
+  td { padding: .8rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td .where { display: block; color: var(--muted); font-size: .85rem; }
+  .pill { font-size: .8rem; font-weight: 600; color: var(--orange); white-space: nowrap; }
+  .sheet-note { font-family: var(--sans); font-size: .82rem; color: var(--muted); margin-top: .6rem; }
+
+  .visit { display: grid; grid-template-columns: 14rem 1fr; gap: 2rem; }
+  @media (max-width: 760px) { .visit { grid-template-columns: 1fr; gap: 1rem; } }
+  .visit dl { margin: 0; font-family: var(--sans); }
+  .visit dt { font-size: .82rem; color: var(--muted); }
+  .visit dd { margin: 0 0 1rem; font-variation-settings: "wdth" 75; font-weight: 700; font-size: 1.9rem; line-height: 1.05; color: var(--bayou); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .visit dd { color: var(--orange); } }
+
+  .desk { background: var(--bayou); color: var(--on-bayou); padding: 1.75rem 1.5rem 1.25rem; }
+  .desk a { color: inherit; }
+  .desk ol { padding-left: 1.3rem; margin: 0 0 1rem; }
+  .desk li { margin-bottom: .5rem; padding-left: .2rem; }
+
+  .calendar { list-style: none; padding: 0; margin: 0; max-width: 46rem; }
+  .calendar li { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1.25rem; padding: 1rem 0; border-top: 1px solid var(--line); }
+  .calendar .when { font-family: var(--sans); font-variation-settings: "wdth" 85; font-weight: 700; color: var(--bayou); line-height: 1.3; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .calendar .when { color: var(--orange); } }
+  .calendar .when small { display: block; font-weight: 500; color: var(--muted); font-size: .85rem; }
+  .calendar h3 { font-size: 1.1rem; margin: 0 0 .25rem; }
+  .calendar p { font-size: 1rem; margin: 0; }
+  .calendar .later .when { color: var(--muted); }
+  @media (max-width: 560px) { .calendar li { grid-template-columns: 1fr; gap: .3rem; } }
+
+  footer { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1.25rem 3rem; font-family: var(--sans); font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem 2rem; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="club">
+      <span>McCombs Houston MBA Real Estate Club</span>
+      <span>Week of November 9, 2026</span>
+    </div>
+    <h1>The Ground Floor</h1>
+    <p class="dek">Houston real estate and the country's biggest projects, in one read.</p>
+  </div>
+  <hr class="property-line">
+</header>
+
+<div class="tape-wrap">
+  <div class="wrap">
+    <div class="tape" role="list" aria-label="Market numbers this week">
+      <div role="listitem"><b>165K</b><span>Jobs added in October, far above forecasts</span></div>
+      <div role="listitem"><b>4.90%</b><span>10-year Treasury on Nov 4, down 15 basis points in a week</span></div>
+      <div role="listitem"><b>62.6%</b><span>More home sellers than buyers in the U.S., the widest gap on record</span></div>
+      <div role="listitem"><b>91.2%</b><span>Houston apartment occupancy in the third quarter</span></div>
+    </div>
+    <p class="tape-note">Sources: Bureau of Labor Statistics via NerdWallet; FRED via RateZip; Redfin; Transwestern via Realty News Report.</p>
+  </div>
+</div>
+
+<div class="join" id="join">
+  <div class="wrap">
+    <p><strong>Join the Real Estate Club</strong>Open to anyone in the McCombs Houston MBA program with an interest in real estate. No dues, one signature event each semester, and deals and news shared all week.</p>
+    <div class="buttons">
+      <a class="btn" href="https://chat.whatsapp.com/Jf6gnrF5uKbHRuntyZtRyz?mode=gi_t" target="_blank" rel="noopener">Join the WhatsApp group</a>
+    </div>
+  </div>
+</div>
+
+<nav class="contents" aria-label="In this issue">
+  <a href="#short">The short version</a>
+  <a href="#houston">Houston</a>
+  <a href="#deals">Deal sheet</a>
+  <a href="#beyond">Beyond Houston</a>
+  <a href="#visit">Site visit</a>
+  <a href="#desk">Underwriting desk</a>
+  <a href="#calendar">On the calendar</a>
+  <a href="archive.html">Past issues</a>
+</nav>
+
+<main>
+
+  <section id="short">
+    <div class="col">
+      <h2>The short version</h2>
+      <p class="lede">It is officially a buyer's market. Redfin says the U.S. has more sellers than buyers by the widest margin on record, and Houston has the third-biggest surplus of sellers in the country.</p>
+      <p>Rates gave buyers a little more help. Bond yields slid after the election and a tech stock selloff, and Zillow's 30-year rate dipped below 7%. The catch is the job market: employers added 165,000 jobs in October, well above forecasts, which makes a December Fed hike more likely and could push rates back up.</p>
+      <p>Rentals are moving the other way. Houston apartment occupancy rose to 91.2%, and Hunington broke ground on 279 units in Katy. Downtown, the fallout from the Kirby Mansion demolition sparked a call for a city adaptive reuse czar, and the Astros announced a new garage.</p>
+    </div>
+  </section>
+
+  <section id="houston">
+    <h2>Houston</h2>
+    <div class="stories">
+      <article>
+        <div class="kicker"><span class="tag">Housing</span><time datetime="2026-11-07">Nov 7</time></div>
+        <h3>Houston ranks third among the country's strongest buyer's markets</h3>
+        <p>Redfin found that Miami, Nashville and Houston had the biggest surplus of sellers over buyers for a second straight month. Houston inventory rose to 5.5 months of supply in September from 5.1 a year earlier, close to the six months HAR economist Ted C. Jones calls balanced, and homes took an average of 58 days to sell.</p>
+        <p class="src"><a href="https://realtynewsreport.com/america-is-now-a-buyers-market/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Multifamily</span><time datetime="2026-11-06">Nov 6</time></div>
+        <h3>Hunington breaks ground on 279 apartments in Katy</h3>
+        <p>The Vic at Sunterra sits in a community that sold 1,024 new homes in 2025, fifth-best in the country according to RCLCO. Hunington plans The Vic at Tamarron in early 2027 and then a project in Texas City. Houston apartment occupancy reached 91.2% in the third quarter, up 1.2 points, with about 12,000 units under construction, according to Transwestern.</p>
+        <p class="src"><a href="https://realtynewsreport.com/hunington-breaks-ground-on-279-apartment-units/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Retail</span><time datetime="2026-11-05">Nov 5</time></div>
+        <h3>Bellaire's Trader Joe's center keeps signing tenants</h3>
+        <p>Einstein Bros. Bagels is among the new tenants planning to open at the Trader Joe's-anchored center in Bellaire. Grocery-anchored centers keep leasing up across Houston, because a strong grocer brings steady daily traffic that smaller tenants want to be near.</p>
+        <p class="src"><a href="https://realtynewsreport.com/trader-joes-bellaire-center-gains-tenants/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Downtown</span><time datetime="2026-11-04">Nov 4</time></div>
+        <h3>After the Kirby Mansion, a call for an adaptive reuse czar</h3>
+        <p>Developers and city officials met downtown the day after the demolition to talk about conversions, the Astros' plans and what comes next. See the site visit below.</p>
+        <p class="src"><a href="#visit">Read the site visit</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="deals">
+    <h2>Deal sheet</h2>
+    <p class="intro">Every project and trade in this issue, side by side. Size and value are as reported; blank means not disclosed.</p>
+    <div class="sheet">
+      <table>
+        <thead>
+          <tr><th>Project or deal</th><th>Type</th><th class="num">Size</th><th class="num">Value</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Benefit Street Partners CRE CLO<span class="where">Nationwide, mostly multifamily</span></td><td><span class="pill">CRE debt</span></td><td class="num">75 properties</td><td class="num">$1.1B</td><td>Closed</td></tr>
+          <tr><td>Blackstone loan portfolio to Prime Finance<span class="where">Nationwide, office and multifamily</span></td><td><span class="pill">Loan sale</span></td><td class="num">8 loans</td><td class="num">~$760M balance</td><td>Closed</td></tr>
+          <tr><td>Hell's Kitchen apartments to Atlas Capital<span class="where">Manhattan</span></td><td><span class="pill">Multifamily sale</span></td><td class="num"></td><td class="num">~$150M reported</td><td>Closed</td></tr>
+          <tr><td>The Vic at Sunterra by Hunington<span class="where">Katy</span></td><td><span class="pill">Multifamily</span></td><td class="num">279 units</td><td class="num"></td><td>Broke ground</td></tr>
+          <tr><td>1031 Main conversion by 3L Real Estate<span class="where">Downtown Houston</span></td><td><span class="pill">Office to residential</span></td><td class="num">553 apartments</td><td class="num"></td><td>Under redevelopment</td></tr>
+          <tr><td>Astros parking garage<span class="where">Congress and Chenevert, downtown</span></td><td><span class="pill">Parking</span></td><td class="num"></td><td class="num"></td><td>Groundbreaking in December</td></tr>
+          <tr><td>George R. Brown Convention Center expansion<span class="where">Downtown Houston</span></td><td><span class="pill">Civic</span></td><td class="num">Doubling in size</td><td class="num"></td><td>Due by 2028</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="beyond">
+    <h2>Beyond Houston</h2>
+    <div class="stories">
+      <article>
+        <div class="kicker"><span class="tag">Economy</span><time datetime="2026-11-06">Nov 6</time></div>
+        <h3>A strong jobs report puts a December hike back in play</h3>
+        <p>Employers added 165,000 jobs in October, far more than economists expected, and unemployment edged down to 4.1%. The Fed tends to raise rates only when the labor market can handle it, so the report makes a hike at the December 8 to 9 meeting look more likely. October's inflation data on November 10 is the next big test.</p>
+        <p class="src"><a href="https://www.nerdwallet.com/mortgages/news/mortgage-rates-today-friday-november-6-2026">NerdWallet</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Capital markets</span><time datetime="2026-11-06">Nov 6</time></div>
+        <h3>Mortgage rates slip below 7% in daily data</h3>
+        <p>Zillow's average 30-year rate fell to 6.96% on November 6, down 11 basis points from a week earlier, as a tech stock selloff pushed investors into bonds. The 10-year Treasury closed at 4.90% on November 4, down 15 basis points over the week. A hot inflation report could reverse the slide quickly.</p>
+        <p class="src"><a href="https://www.nerdwallet.com/mortgages/news/mortgage-rates-today-friday-november-6-2026">NerdWallet</a><a href="https://www.ratezip.com/news/mortgage-rates-today-2026-11-06">RateZip</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Housing</span><time datetime="2026-11-07">Nov 7</time></div>
+        <h3>The U.S. has the fewest homebuyers on record</h3>
+        <p>Redfin counted about 929,000 active buyers in September, the lowest since its records began in 2013, against about 1.5 million sellers, the most since March 2020. Forty-one of the 50 largest metros are buyer's markets. Only five are seller's markets, including San Francisco, where AI wealth is driving competition.</p>
+        <p class="src"><a href="https://realtynewsreport.com/america-is-now-a-buyers-market/">Realty News Report</a></p>
+      </article>
+      <article>
+        <div class="kicker"><span class="tag">Debt markets</span><time datetime="2026-11-06">Nov 6</time></div>
+        <h3>Commercial real estate loans are trading again</h3>
+        <p>Prime Finance bought eight performing loans with about $760 million in balances from Blackstone's real estate debt business, backed by office and multifamily properties. Benefit Street Partners also closed a $1.1 billion securitization backed mostly by multifamily loans on 75 properties. Active debt markets usually mean more property deals can get financed.</p>
+        <p class="src"><a href="https://www.connectcre.com/">Connect CRE</a><a href="https://asreport.americanbanker.com/news/benefit-street-partners-latest-cre-clo-raises-1-1-billion">Asset Securitization Report</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="visit">
+    <h2>Site visit: Downtown Houston's next chapter</h2>
+    <div class="visit">
+      <dl>
+        <dt>Vacancy in older downtown offices</dt><dd>25&ndash;40%</dd>
+        <dt>Apartments planned at 1031 Main</dt><dd>553</dd>
+        <dt>Convention center doubles by</dt><dd>2028</dd>
+      </dl>
+      <div class="col">
+        <p>The day after the Kirby Mansion came down, Bisnow hosted a downtown conference on conversions and adaptive reuse. Ryan LeVasseur of LeVass Ventures proposed that the city appoint an adaptive reuse czar to save historic buildings before they reach the wrecking ball. The city's chief economic development officer, Gwendolyn Tillotson-Bell, said her office was brought into the Kirby situation too late and supported the idea.</p>
+        <p>The Astros said they will break ground in December on a garage north of Daikin Park, to be finished before the 2028 season, and are interested in a hotel and entertainment district nearby. Speakers agreed a district likely waits until the George R. Brown Convention Center expansion is done in 2028. On housing, LeVasseur noted downtown rents have stayed roughly flat since about 5,000 units were built, while construction costs are up 40% to 50%.</p>
+        <p>The lesson is that older buildings only survive when someone can make the numbers work. Conversions like 1031 Main need a low purchase price, a building layout that fits apartments, and often city help. A dedicated point person at City Hall could make those deals happen earlier, before demolition becomes the easy answer.</p>
+        <p class="src"><a href="https://realtynewsreport.com/houston-needs-an-adaptive-reuse-czar/">Realty News Report</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="desk">
+    <div class="desk">
+      <h2>Underwriting desk: does an office conversion pencil?</h2>
+      <div class="col">
+        <p>With older downtown offices sitting 25% to 40% vacant, conversions keep coming up. Here is a quick way to screen one:</p>
+        <ol>
+          <li>Check the floor plate. Apartments need windows, so very deep floors leave dark interior space that is hard to use. Narrower towers convert more easily.</li>
+          <li>Find the plumbing. Every unit needs kitchens and bathrooms, and adding new plumbing lines through a concrete tower is one of the biggest costs.</li>
+          <li>Work backward from rent. If downtown rents are flat and construction costs are up 40% to 50%, the purchase price has to be very low for the deal to work.</li>
+          <li>Count the help. Tax abatements, grants or historic tax credits often close the gap, so find out what the city and state offer before you make an offer.</li>
+        </ol>
+        <p>Most conversions are won or lost on the purchase price. Buy the building cheaply enough, and the rest becomes a construction problem instead of a financing problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendar">
+    <h2>On the calendar through November 25</h2>
+    <p class="intro">The dates worth watching before the next issue.</p>
+    <ul class="calendar">
+      <li><div class="when">Tue, Nov 10<small>Nationwide</small></div><div><h3>October CPI report</h3><p>The first inflation reading to capture the Fed's September hike, and the biggest input for December. <a href="https://www.bls.gov/schedule/news_release/cpi.htm">BLS schedule</a></p></div></li>
+      <li><div class="when">Thu, Nov 12<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>Shows whether the recent slide in rates holds after the inflation report. <a href="https://www.freddiemac.com/pmms">Freddie Mac</a></p></div></li>
+      <li><div class="when">Mid-Nov<small>Houston</small></div><div><h3>HAR October housing update</h3><p>The first Houston sales data since rates peaked in early October. <a href="https://www.har.com/content/department/mls">HAR market updates</a></p></div></li>
+      <li><div class="when">Thu, Nov 19<small>Nationwide</small></div><div><h3>Freddie Mac weekly mortgage rates</h3><p>Another read heading into the holidays. <a href="https://www.freddiemac.com/pmms">Freddie Mac</a></p></div></li>
+      <li><div class="when">Wed, Nov 25<small>Nationwide</small></div><div><h3>PCE inflation report</h3><p>The Fed's preferred inflation measure, and the last big data point before its December meeting.</p></div></li>
+      <li class="later"><div class="when">Dec 8 to 9<small>Looking ahead</small></div><div><h3>Federal Reserve meeting</h3><p>The decision comes December 9, with new economic projections. <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">Fed calendar</a></p></div></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <span>The Ground Floor, McCombs Houston MBA Real Estate Club</span>
+  <a href="archive.html">Past issues</a>
+  <!-- Replace with your club email -->
+  <a href="mailto:you@example.com?subject=The%20Ground%20Floor">Send us a deal or story</a>
+  <span>Covering November 4 to 8, 2026</span>
+</footer>
+
+</body>
+</html>
